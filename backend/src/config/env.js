@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import { fileURLToPath } from 'node:url';
 
 export const env = {
   port: Number(process.env.PORT || 4000),
@@ -13,5 +14,5 @@ export const env = {
   corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:4000',
   allowBackupCommands: String(process.env.ALLOW_BACKUP_COMMANDS || 'false').toLowerCase() === 'true',
   backupDir: process.env.BACKUP_DIR || './backups',
-  frontendDir: process.env.FRONTEND_DIR || new URL('../../../frontend', import.meta.url).pathname
+  frontendDir: process.env.FRONTEND_DIR || fileURLToPath(new URL('../../../frontend', import.meta.url))
 };

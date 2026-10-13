@@ -1,9 +1,7 @@
 import {renderControlPropio} from '../modules/control/propio.js';
 import { initTheme } from './theme.js';
 import { api, sesion, tienePermiso } from './api.js';
-import {renderMovil} from '../modules/movil/movil.js';
 import { renderPanel } from '../modules/lugares/panel.js';
-import { renderEstudiante, detenerConsultaEstudiante } from '../modules/movil/estudiante.js';
 import { renderVehiculos } from '../modules/vehiculos/vehiculos.js';
 import { renderAccesos } from '../modules/control/accesos.js';
 import { renderParqueos } from '../modules/lugares/parqueos.js';
@@ -61,7 +59,12 @@ async function iniciarAplicacion() {
   document.getElementById('userRole').textContent = u.nombreRol;
   document.getElementById('avatar').textContent = (u.nombreCompleto || 'U').trim().charAt(0).toUpperCase();
 
-  // Nueve módulos del modelo aprobado; no existen menús independientes fuera de estos casos de uso.
+  document.getElementById('welcomeName').textContent = 'Hola, ' + (u.nombreCompleto || 'bienvenido').trim().split(/\s+/)[0] + '.';
+  document.getElementById('welcomeRole').textContent = u.nombreRol;
+  document.getElementById('workspaceDate').textContent = new Intl.DateTimeFormat('es-BO', {weekday:'long', day:'numeric', month:'long', timeZone:'America/La_Paz'}).format(new Date());
+  document.getElementById('welcomeDescription').textContent = u.rol === 'PROPIETARIO' ? 'Revisa los movimientos de tus vehículos desde un solo lugar.' : 'Supervisa los espacios del campus y encuentra tus herramientas de trabajo.';
+
+  // Ocho módulos web activos. El noveno (móvil) queda reservado para una fase posterior.
   const modulos = [
     { id:'usuarios', label:'Gestión de usuarios', icon:'♙', grupo:'GESTIÓN INSTITUCIONAL', perm:'usuarios.gestionar', render:(pane)=>renderUsuarios(pane) },
     { id:'reportes', label:'Informes y reportes', icon:'▥', grupo:'GESTIÓN INSTITUCIONAL', perm:'reportes.generar', render:(pane)=>renderReportes(pane) },
@@ -71,9 +74,17 @@ async function iniciarAplicacion() {
     { id:'control', label:'Control de ingreso y salida', icon:'◉', grupo:'OPERACIÓN', perm:['acceso.ver','historial.ver','acceso.propio'], render:(pane)=>u.rol==='PROPIETARIO'?renderControlPropio(pane):renderAgrupado(pane,[{nombre:'Ingresos y salidas',perm:'acceso.ver',render:(pane)=>renderAccesos(pane)},{nombre:'Historial y trazabilidad',perm:'historial.ver',render:(pane)=>renderHistorial(pane)}]) },
     { id:'alertas', label:'Alertas y notificaciones', icon:'⚠', grupo:'OPERACIÓN', perm:'alertas.ver', render:(pane)=>renderAlertas(pane) },
     { id:'auditoria', label:'Auditoría y control', icon:'✓', grupo:'CONTROL Y ACCESO', perm:['auditoria.ver','respaldos.gestionar'], render:(pane)=>renderAgrupado(pane,[{nombre:'Auditoría',perm:'auditoria.ver',render:(pane)=>renderAuditoria(pane)},{nombre:'Respaldo y continuidad',perm:'respaldos.gestionar',render:(pane)=>renderRespaldos(pane)}]) },
-    { id:'movil', label:'Componente móvil', icon:'▣', grupo:'CONTROL Y ACCESO', perm:'sesion.autenticada', render:(pane)=>renderMovil(pane,u) }
-  ].filter(m => (m.id==='movil'?true:Array.isArray(m.perm)?m.perm.some(p=>tienePermiso(p)):tienePermiso(m.perm)));
+  ].filter(m => (Array.isArray(m.perm)?m.perm.some(p=>tienePermiso(p)):tienePermiso(m.perm)));
 
+  const quick = document.getElementById('quickActions');
+  const quickLabels={lugares:'Supervisar espacios',control:'Ingresos y salidas',reportes:'Ver reportes',vehiculos:'Consultar vehículos',usuarios:'Gestionar usuarios',alertas:'Revisar alertas',auditoria:'Consultar auditoría',propietarios:'Ver propietarios'};
+  const priority=u.rol==='PROPIETARIO'?['control']:['lugares','control','reportes','alertas','vehiculos','usuarios','auditoria','propietarios'];
+  for (const id of priority.filter(id=>modulos.some(m=>m.id===id)).slice(0,4)) {
+    const m=modulos.find(m=>m.id===id), b=document.createElement('button');
+    b.className='quick-action'; b.dataset.quick=id;
+    b.innerHTML=icon(id)+'<span>'+quickLabels[id]+'</span><span aria-hidden="true">↗</span>';
+    b.onclick=()=>navegar(m);quick.append(b);
+  }
   for (const g of [...new Set(modulos.map(m => m.grupo))]) {
     const h = document.createElement('h4');
     h.textContent = g;
@@ -103,12 +114,12 @@ async function iniciarAplicacion() {
   async function navegar(m) {
     if (!m) return;
     const thisVersion=++navigationVersion;
-    detenerConsultaEstudiante();
     c.dataset.moduloActivo=m.id;
     document.getElementById('currentModule').textContent=m.label;
     document.title=m.label+' · NEXO PARK';
     closeMenu();
-    document.querySelectorAll('.menu-item').forEach(x => x.classList.toggle('active', x.dataset.id === m.id));
+    document.querySelectorAll('.menu-item').forEach(x => {x.classList.toggle('active', x.dataset.id === m.id); if(x.dataset.id === m.id)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current');});
+    document.querySelectorAll('.quick-action').forEach(x => x.classList.toggle('selected',x.dataset.quick===m.id));
     history.replaceState(null, '', `#${m.id}`);
     c.setAttribute('aria-busy','true');
     c.innerHTML = '<div class="skeleton" role="status" aria-label="Cargando módulo"><i></i><i></i><i></i></div>';
@@ -124,16 +135,16 @@ async function iniciarAplicacion() {
         const retry=document.createElement('button');retry.className='btn btn-primary';retry.textContent='Volver a intentar';retry.onclick=()=>navegar(m);card.append(h,p,retry);c.append(card);
       }
     }
-    if(thisVersion===navigationVersion){c.setAttribute('aria-busy','false');c.focus({preventScroll:true});}
+    if(thisVersion===navigationVersion){c.setAttribute('aria-busy','false');c.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});}
   }
 
   const wanted = location.hash.slice(1);
-  const defaultId = u.rol === 'PROPIETARIO' ? 'movil' : (modulos.find(m=>m.id==='lugares')?'lugares':modulos[0]?.id);
+  const defaultId = u.rol === 'PROPIETARIO' ? 'control' : (modulos.find(m=>m.id==='lugares')?'lugares':modulos[0]?.id);
   const initial = modulos.find(m => m.id === wanted) || modulos.find(m=>m.id===defaultId) || modulos[0];
   if (initial) navegar(initial);
   else c.innerHTML = '<div class="card panel"><h3>Sin módulos asignados</h3><p>Contacte al administrador del sistema.</p></div>';
 
-  window.addEventListener('hashchange',()=>{const requested=location.hash.slice(1);const target=modulos.find(m=>m.id===requested);if(target && c.dataset.moduloActivo!==target.id)void navegar(target);});
+  window.addEventListener('hashchange',()=>{const requested=location.hash.slice(1);const target=modulos.find(m=>m.id===requested);if(target && c.dataset.moduloActivo!==target.id)void navegar(target);else if(!target && c.dataset.moduloActivo)history.replaceState(null,'','#'+c.dataset.moduloActivo);});
   document.getElementById('logout').onclick = cerrarSesion;
   menuButton.onclick = () => {const open=sidebar.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));};
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => {});

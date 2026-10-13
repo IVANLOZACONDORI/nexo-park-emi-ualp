@@ -1,6 +1,6 @@
 {
   "name": "nexo-park-emi-ualp",
-  "version": "30.0.0",
+  "version": "33.0.0",
   "private": true,
   "description": "NEXO PARK EMI UALP — nueve módulos y siete actores",
   "scripts": {
@@ -10,6 +10,8 @@
     "db:schema": "psql \"$DATABASE_URL\" -f backend/sql/01_schema.sql -f backend/sql/02_seed.sql -f backend/sql/03_views_functions.sql",
     "test": "node tests/structure.mjs",
     "test:integration": "node tests/integration.mjs",
-    "admin:create": "npm --prefix backend run admin:create"
+    "admin:create": "npm --prefix backend run admin:create",
+    "diagnostico": "node scripts/diagnostico.mjs",
+    "test:captcha": "node --test tests/captcha.test.mjs"
   }
 }

@@ -3,6 +3,11 @@ import { api, sesion } from './api.js';
 
 let captchaToken = '';
 let countdownTimer = null;
+let expiryTimer = null;
+let captchaVersion = 0;
+let submitting = false;
+const captchaHint = document.getElementById('captchaHint');
+const connectionHelp = document.getElementById('connectionHelp');
 
 const q = document.getElementById('captchaQuestion');
 const err = document.getElementById('error');
@@ -19,7 +24,8 @@ const togglePassword = document.getElementById('togglePassword');
 const capsWarning = document.getElementById('capsWarning');
 
 function setLoading(loading) {
-  loginButton.disabled = loading;
+  submitting = loading;
+  loginButton.disabled = loading || !captchaToken;
   reloadButton.disabled = loading;
   userInput.readOnly = loading;
   passwordInput.readOnly = loading;
@@ -45,21 +51,46 @@ function showStatus(message) {
   err.classList.add('hidden');
 }
 
-async function cargarCaptcha() {
-  clearInterval(countdownTimer);
+async function cargarCaptcha({ preserveError = false } = {}) {
+  const version = ++captchaVersion;
+  clearTimeout(expiryTimer);
   captchaToken = '';
   captchaInput.value = '';
-  q.textContent = 'Cargando...';
+  captchaInput.disabled = true;
+  loginButton.disabled = true;
+  q.textContent = 'Preparando verificación…';
+  captchaHint.textContent = 'Conectando con el servidor';
   reloadButton.disabled = true;
+  connectionHelp.hidden = true;
+  if (!preserveError) hideMessages();
   try {
-    const c = await api('/autenticacion/captcha', { auth: false });
-    captchaToken = c.token;
-    q.textContent = c.question;
-  } catch {
-    q.textContent = 'No disponible';
-    showError('No se pudo generar el CAPTCHA. Intente nuevamente.');
+    let challenge;
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try { challenge = await api('/autenticacion/captcha', { auth: false, timeout: 8000 }); break; }
+      catch (e) { if (attempt || (e.status && e.status < 500)) throw e; await new Promise(r => setTimeout(r, 700)); }
+    }
+    if (version !== captchaVersion) return;
+    if (!challenge?.token || typeof challenge.question !== 'string') throw new Error('El servidor devolvió una verificación incompleta. Reinicie NEXO PARK con los archivos actualizados.');
+    captchaToken = challenge.token;
+    q.textContent = challenge.question;
+    captchaInput.disabled = false;
+    captchaHint.textContent = 'Resuelve la operación e ingresa el resultado.';
+    expiryTimer = setTimeout(() => {
+      if (submitting || version !== captchaVersion) return;
+      captchaToken = ''; loginButton.disabled = true; captchaInput.disabled = true;
+      captchaHint.textContent = 'La verificación venció. Pulsa ↻ para generar otra.';
+    }, Math.max(1, Number(challenge.expiresInSeconds || 300)) * 1000);
+  } catch (e) {
+    if (version !== captchaVersion) return;
+    q.textContent = 'Sin verificación';
+    captchaHint.textContent = 'Pulsa ↻ después de restablecer la conexión.';
+    showError(e.message);
+    connectionHelp.hidden = false;
   } finally {
-    reloadButton.disabled = false;
+    if (version === captchaVersion) {
+      reloadButton.disabled = submitting;
+      loginButton.disabled = submitting || !captchaToken;
+    }
   }
 }
 
@@ -102,6 +133,7 @@ passwordInput.addEventListener('blur', () => capsWarning.classList.add('hidden')
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
+  if (submitting) return;
   hideMessages();
 
   const nombreUsuario = userInput.value.trim();
@@ -112,6 +144,7 @@ form.addEventListener('submit', async e => {
     showError('Complete usuario, contraseña y CAPTCHA para continuar.');
     return;
   }
+  if (!/^\d{1,3}$/.test(captchaRespuesta)) { showError('Ingrese únicamente el resultado numérico de la operación.'); captchaInput.focus(); return; }
   if (!captchaToken) {
     showError('El CAPTCHA no está disponible. Genere uno nuevo e intente otra vez.');
     await cargarCaptcha();
@@ -133,7 +166,7 @@ form.addEventListener('submit', async e => {
       iniciarCuentaRegresiva(ex.data.retryAfterSeconds);
     } else {
       showError(ex.message || 'No fue posible iniciar sesión.');
-      await cargarCaptcha();
+      await cargarCaptcha({ preserveError: true });
     }
     passwordInput.select();
   } finally {
@@ -143,6 +176,7 @@ form.addEventListener('submit', async e => {
 
 async function iniciar() {
   initTheme('themeToggleLogin');
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').then(r => r.update()).catch(() => {});
   if (sesion.token) {
     try {
       const data = await api('/autenticacion/yo');
@@ -157,4 +191,5 @@ async function iniciar() {
   await cargarCaptcha();
 }
 
+window.addEventListener('online', () => { if (!captchaToken && !submitting) cargarCaptcha(); });
 iniciar();

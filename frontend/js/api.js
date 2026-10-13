@@ -19,28 +19,31 @@ export const sesion = {
   }
 };
 
-export async function api(ruta, { method = 'GET', body, auth = true, headers = {} } = {}) {
+export async function api(ruta, { method = 'GET', body, auth = true, headers = {}, timeout = 15000 } = {}) {
   const h = { 'Content-Type': 'application/json', ...headers };
   if (auth && sesion.token) h.Authorization = `Bearer ${sesion.token}`;
 
   let r;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeout);
   try {
     r = await fetch(`${API}${ruta}`, {
       method,
+      signal: controller.signal,
       headers: h,
       cache: 'no-store',
       body: body === undefined ? undefined : JSON.stringify(body)
     });
-  } catch {
-    const e = new Error('No se pudo conectar con el sistema. Verifique la red e intente nuevamente.');
+  } catch (cause) {
+    const e = new Error(cause.name === 'AbortError' ? 'El servidor tardó demasiado en responder. Intente nuevamente.' : 'No se pudo conectar con el servidor. Compruebe que NEXO PARK esté iniciado.');
     e.status = 0;
     e.data = null;
     throw e;
-  }
+  } finally { clearTimeout(timer); }
 
   let data;
   try { data = await r.json(); }
-  catch { data = { message: 'La respuesta recibida no es válida.' }; }
+  catch { const e = new Error('Esta dirección no responde como servidor de NEXO PARK. Abra el sistema desde la dirección indicada al iniciarlo, no desde Live Server.'); e.status = r.status; e.code = 'INVALID_RESPONSE'; throw e; }
 
   if (!r.ok) {
     if (r.status === 401 && auth) {

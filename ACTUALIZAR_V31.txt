@@ -1,0 +1,13 @@
+NEXO PARK V31 - PORTAL EMI
+
+1. Detenga el servidor con Ctrl+C.
+2. Copie el contenido de NEXO_PARK_V31 en su carpeta del proyecto.
+3. Conserve .git y backend/.env.
+4. En CMD, desde la carpeta del proyecto:
+   npm --prefix backend ci
+   npm start
+5. Abra http://localhost:4000 y recargue con Ctrl+F5.
+
+Con Docker Desktop iniciado, use: docker compose up -d --build
+
+El portal incluye los menus institucionales y el recorrido Infraestructura / Parqueos / NEXO PARK. Los enlaces institucionales externos requieren Internet. El backend y los nueve modulos mantienen la base V30.

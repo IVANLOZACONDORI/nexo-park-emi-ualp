@@ -1,0 +1,18 @@
+{
+  "errors": [],
+  "checks": [
+    "captcha loads",
+    "503 disables login",
+    "retry restores challenge",
+    "wrong answer rejected",
+    "successful login",
+    "8 web modules; mobile deferred",
+    "quick actions",
+    "search",
+    "PDF",
+    "dark mode",
+    "mobile layout",
+    "mobile menu",
+    "CAPTCHA input validation"
+  ]
+}

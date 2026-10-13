@@ -1,3 +1,19 @@
+# NEXO PARK V33
+
+Consulta primero [ACTUALIZAR_V33.md](ACTUALIZAR_V33.md) para instalar, conocer el alcance actual y actualizar GitHub. El módulo móvil se reserva para una fase posterior y no aparece en la interfaz web.
+
+---
+
+# NEXO PARK EMI UALP V32
+
+Versión completa con acceso corregido y nueva interfaz interna.
+
+Consulte primero **ACTUALIZAR_V32.md** para instalar, iniciar y diagnosticar el CAPTCHA.
+
+# NEXO PARK V31 · Portal EMI e Infraestructura
+
+Actualización del portal institucional basada en la referencia EMI. Recorrido Inicio → Infraestructura → Parqueos → NEXO PARK. Véase docs/PORTAL_EMI_V31.md. Los módulos y el esquema de datos conservan la base V30.
+
 # NEXO PARK · EMI UALP · V30
 
 Evolución de PARKIA V29. Sistema de parqueos con **9 módulos y 7 actores**, frontend y backend reorganizados por módulo. Incluye portal EMI, acceso, consulta móvil, gestión operativa, PDF con vista previa y documentación actualizada.

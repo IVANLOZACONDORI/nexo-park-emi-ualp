@@ -9,13 +9,14 @@ export function createCaptcha() {
   const right = op === '-' ? Math.min(a,b) : b;
   const answer = op === '+' ? left + right : left - right;
   const token = jwt.sign({ answer, type: 'captcha' }, env.captchaSecret, { expiresIn: env.captchaExpiresIn });
-  return { token, question: `${left} ${op} ${right} = ?` };
+  const { exp, iat } = jwt.decode(token);
+  return { token, question: `${left} ${op} ${right} = ?`, expiresInSeconds: exp - iat };
 }
 
 export function verifyCaptcha(token, answer) {
   try {
     const payload = jwt.verify(token, env.captchaSecret);
-    return payload.type === 'captcha' && Number(answer) === Number(payload.answer);
+    return payload.type === 'captcha' && /^\d{1,3}$/.test(String(answer).trim()) && Number(answer) === Number(payload.answer);
   } catch {
     return false;
   }

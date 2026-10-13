@@ -1,0 +1,22 @@
+{
+  "errors": [],
+  "checks": [
+    "captcha loads",
+    "503 disables login",
+    "retry restores challenge",
+    "wrong answer rejected",
+    "successful login",
+    "9 modules",
+    "quick actions",
+    "search",
+    "PDF",
+    "dark mode",
+    "mobile layout",
+    "mobile menu",
+    "CAPTCHA input validation",
+    "HTML response diagnostic",
+    "expiry disables form",
+    "seven roles and owner isolation",
+    "session revocation"
+  ]
+}

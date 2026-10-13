@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/css/app.css">
   <link rel="manifest" href="/manifest.webmanifest">
 <link rel="stylesheet" href="/css/nexo.css">
-</head>
+<link rel="stylesheet" href="/css/workspace32.css?v=32"></head>
 <body>
 <button type="button" id="themeToggleLogin" class="btn btn-outline theme-toggle login-theme" aria-label="Cambiar tema">☾ Modo noche</button>
 <main class="login-shell">
@@ -22,17 +22,18 @@
   <section class="login-panel">
     <div class="card login-card">
       <a href="/parqueos" class="login-logo-link" aria-label="Volver a NEXO PARK">
-        <img class="logo" src="/assets/logo/parkia-logo.svg" alt="NEXO PARK · EMI UALP">
+        <img class="logo" src="/assets/logo/nexo-wordmark.svg" alt="NEXO PARK · EMI UALP">
       </a>
       <div class="login-heading">
         <span class="badge">TU ESPACIO DE TRABAJO</span>
-        <h2>Qué gusto verte.</h2>
-        <p>Ingrese sus credenciales para continuar.</p>
+        <h2>Tu campus. Tu espacio.</h2>
+        <p>Accede a tus herramientas de gestión y movilidad.</p>
       </div>
 
       <div id="error" class="error hidden" role="alert" aria-live="assertive"></div>
       <div id="status" class="login-status hidden" role="status" aria-live="polite"></div>
 
+      <div id="connectionHelp" class="connection-help" hidden><strong>Recuperar la conexión</strong><p>Inicia el proyecto completo y abre la dirección que muestra la terminal. El CAPTCHA necesita el servidor; una vista de HTML o Live Server no lo genera.</p><a href="http://localhost:4000/login">Abrir servidor local · puerto 4000 ↗</a><p>Si usas otro puerto o un servidor del campus, utiliza su dirección.</p></div>
       <form id="loginForm" novalidate>
         <div class="field">
           <label for="username">USUARIO</label>
@@ -53,13 +54,14 @@
           <div class="captcha-box">
             <div>
               <div id="captchaQuestion" class="captcha-question" aria-live="polite">Cargando...</div>
-              <input id="captchaAnswer" name="captchaAnswer" required inputmode="numeric" autocomplete="off" maxlength="3" placeholder="Resultado" style="margin-top:.5rem">
+              <input id="captchaAnswer" aria-describedby="captchaHint" disabled name="captchaAnswer" required inputmode="numeric" autocomplete="off" maxlength="3" placeholder="Resultado" style="margin-top:.5rem">
             </div>
             <button type="button" class="btn btn-outline captcha-reload" id="reloadCaptcha" aria-label="Generar un nuevo CAPTCHA" title="Nuevo CAPTCHA">↻</button>
           </div>
+          <small id="captchaHint" class="captcha-hint" role="status">Conectando con el servidor</small>
         </div>
 
-        <button class="btn btn-navy login-submit" id="loginButton" type="submit">
+        <button class="btn btn-navy login-submit" id="loginButton" type="submit" disabled>
           <span id="loginButtonText">Ingresar a NEXO PARK</span>
           <span id="loginSpinner" class="login-spinner hidden" aria-hidden="true"></span>
         </button>
