@@ -1,3 +1,9 @@
+# NEXO PARK V34
+
+Comience por [LEEME_V34.md](LEEME_V34.md). Ejecute INICIAR_NEXO.cmd para abrir el inicio institucional.
+
+---
+
 # NEXO PARK V33
 
 Consulta primero [ACTUALIZAR_V33.md](ACTUALIZAR_V33.md) para instalar, conocer el alcance actual y actualizar GitHub. El módulo móvil se reserva para una fase posterior y no aparece en la interfaz web.

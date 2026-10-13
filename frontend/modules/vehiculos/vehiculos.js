@@ -1,4 +1,4 @@
-import {api,aviso,tienePermiso,fecha} from '../../js/api.js';
+import {api,aviso,tienePermiso,fecha} from '../../js/api.js?v=34';
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cats=['MILITAR','CIVIL','ADMINISTRATIVO','ESTUDIANTE','VISITANTE','PROVEEDOR','INSTITUCIONAL'];
 const tipos=['AUTOMOVIL','CAMIONETA','MOTOCICLETA','CAMION','MINIBUS','OTRO'];

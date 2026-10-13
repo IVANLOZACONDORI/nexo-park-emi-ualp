@@ -1,5 +1,5 @@
 
-import {api,fecha} from '../../js/api.js';
+import {api,fecha} from '../../js/api.js?v=34';
 const encode=file=>new Promise((resolve,reject)=>{if(!file||file.size>6*1024*1024)return reject(new Error('Elija una imagen de hasta 6 MB.'));const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=()=>reject(new Error('No se pudo leer la fotografía.'));r.readAsDataURL(file)});
 
 const zoneMeta={

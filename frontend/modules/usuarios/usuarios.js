@@ -1,4 +1,4 @@
-import {api,aviso,sesion} from '../../js/api.js';
+import {api,aviso,sesion} from '../../js/api.js?v=34';
 const esc = x => String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const opciones=(items,selected='',campo='codigo',rotulo='nombre')=>items.map(x=>`<option value="${esc(x[campo])}" ${x[campo]===selected?'selected':''}>${esc(x[rotulo])}</option>`).join('');
 export async function renderUsuarios(c){

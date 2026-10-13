@@ -1,4 +1,4 @@
-import {api,fecha,aviso} from '../../js/api.js';
+import {api,fecha,aviso} from '../../js/api.js?v=34';
 const h=v=>String(v??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
 const estados=['','AUTORIZADO','DENEGADO','INCIERTO','MANUAL','PENDIENTE'];
 let secuencia=0;

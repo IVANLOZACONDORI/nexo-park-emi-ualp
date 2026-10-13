@@ -1,5 +1,5 @@
 
-import {api} from '../../js/api.js';
+import {api} from '../../js/api.js?v=34';
 const esc=v=>String(v??'');
 
 const zoneMeta={

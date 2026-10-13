@@ -1,4 +1,4 @@
-import {api,fecha} from '../../js/api.js';
+import {api,fecha} from '../../js/api.js?v=34';
 export async function renderControlPropio(c){
  const d=await api('/estudiante/mis-accesos');
  const section=document.createElement('section');const h=document.createElement('h1');h.textContent='Mis ingresos y salidas';const p=document.createElement('p');p.textContent='Últimos 100 movimientos de los vehículos asociados a tu cuenta. La consulta no autoriza el ingreso ni modifica registros.';

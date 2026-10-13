@@ -1,0 +1,20 @@
+{
+  "version": "34.0.0",
+  "entorno": "Chromium y PGlite local en Linux",
+  "resultado": "APROBADO",
+  "comprobaciones": [
+    "Inicio institucional sin enlaces directos a Parqueos/login",
+    "Infraestructura con cinco espacios y servicios",
+    "Laboratorios: navegación de ida y vuelta",
+    "Infraestructura a 390 px sin desbordamiento",
+    "Parqueos → login con CAPTCHA válido",
+    "Recuperación tras fallo 503 y respuesta no JSON",
+    "Respuesta incorrecta rechazada",
+    "Ocho módulos web; móvil fuera de interfaz",
+    "Siete roles y revocación de sesiones",
+    "Reportes PDF válidos",
+    "Propietario inicia en control; enlace obsoleto y búsqueda sin módulo móvil",
+    "Cuatro pruebas unitarias CAPTCHA; duración numérica y valores heredados"
+  ],
+  "pendiente": "Iniciador PowerShell en Windows, cámaras físicas, Docker y restauración real"
+}

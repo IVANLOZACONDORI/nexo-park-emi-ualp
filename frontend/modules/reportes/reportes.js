@@ -1,4 +1,4 @@
-import {api, aviso, sesion} from '../../js/api.js';
+import {api, aviso, sesion} from '../../js/api.js?v=34';
 const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=String(text);return n;};
 function csv(rows){return rows.map(row=>row.map(v=>{let text=String(v??'');if(/^[=+@\-\t\r]/.test(text))text="'"+text;return '"'+text.replaceAll('"','""')+'"';}).join(',')).join('\r\n');}
 function descargar(rows,nombre){const blob=new Blob(['\ufeff'+csv(rows)],{type:'text/csv;charset=utf-8'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=nombre;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}

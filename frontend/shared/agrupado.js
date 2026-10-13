@@ -1,4 +1,4 @@
-import {tienePermiso} from '../js/api.js';
+import {tienePermiso} from '../js/api.js?v=34';
 /** Composición accesible: pestañas dentro del mismo caso de uso sin exponer nuevos módulos. */
 export async function renderAgrupado(c, secciones){
   const validas=secciones.filter(s=>tienePermiso(s.perm));

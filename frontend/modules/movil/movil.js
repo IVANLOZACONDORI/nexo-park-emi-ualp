@@ -1,5 +1,5 @@
-import {renderEstudiante} from './estudiante.js';
-import {api} from '../../js/api.js';
+import {renderEstudiante} from './estudiante.js?v=34';
+import {api} from '../../js/api.js?v=34';
 export async function renderMovil(c,u){
  if(u.rol==='PROPIETARIO')return renderEstudiante(c);
  const data=await api('/movil/contexto');

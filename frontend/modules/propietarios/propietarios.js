@@ -1,4 +1,4 @@
-import {api,aviso,tienePermiso} from '../../js/api.js';
+import {api,aviso,tienePermiso} from '../../js/api.js?v=34';
 const e=x=>String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 export async function renderPropietarios(c){
  const gestionar=tienePermiso('propietarios.gestionar');let items=[],zonas=[];

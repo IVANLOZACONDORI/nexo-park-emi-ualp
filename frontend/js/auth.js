@@ -1,5 +1,5 @@
-import { initTheme } from './theme.js';
-import { api, sesion } from './api.js';
+import { initTheme } from './theme.js?v=34';
+import { api, sesion } from './api.js?v=34';
 
 let captchaToken = '';
 let countdownTimer = null;
@@ -176,7 +176,7 @@ form.addEventListener('submit', async e => {
 
 async function iniciar() {
   initTheme('themeToggleLogin');
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').then(r => r.update()).catch(() => {});
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' }).then(r => r.update()).catch(() => {});
   if (sesion.token) {
     try {
       const data = await api('/autenticacion/yo');

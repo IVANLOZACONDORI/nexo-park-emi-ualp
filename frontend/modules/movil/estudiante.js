@@ -1,4 +1,4 @@
-import { api, fecha } from '../../js/api.js';
+import { api, fecha } from '../../js/api.js?v=34';
 
 let teardown = null;
 const etiquetas={LIBRE:'Libre',OCUPADA:'Ocupada',FUERA_SERVICIO:'Fuera de servicio',SIN_DATOS:'Sin datos'};

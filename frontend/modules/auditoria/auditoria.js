@@ -1,4 +1,4 @@
-import {api,fecha,aviso} from '../../js/api.js';
+import {api,fecha,aviso} from '../../js/api.js?v=34';
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export async function renderAuditoria(c){
  c.innerHTML=`<div class="page-head"><div><h1>Auditoría y seguridad</h1><p>Trazabilidad institucional · consultas para personal autorizado</p></div></div>

@@ -1,4 +1,4 @@
-import {api,fecha,aviso,tienePermiso} from '../../js/api.js';
+import {api,fecha,aviso,tienePermiso} from '../../js/api.js?v=34';
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export async function renderAccesos(c){
  const gestionar=tienePermiso('acceso.validar');
