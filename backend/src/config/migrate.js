@@ -7,7 +7,7 @@ export async function migrate(){
   await client.query('BEGIN');
   await client.query('SELECT pg_advisory_xact_lock(302026)');
   await client.query('CREATE TABLE IF NOT EXISTS migraciones_parkia(version VARCHAR(30) PRIMARY KEY,aplicada_en TIMESTAMPTZ DEFAULT NOW())');
-  const steps=[['V11_ALERTAS','04_alertas_v11.sql'],['V15_AUDITORIA','05_auditoria_v15.sql'],['V17_MAPEO','06_mapeo_real_v17.sql'],['V26_MAPA','07_mapa_rectangulos_v26.sql'],['V29_CASOS_USO','08_casos_uso_v29.sql'],['V30_NEXO','09_nexo_v30.sql']];
+  const steps=[['V11_ALERTAS','04_alertas_v11.sql'],['V15_AUDITORIA','05_auditoria_v15.sql'],['V17_MAPEO','06_mapeo_real_v17.sql'],['V26_MAPA','07_mapa_rectangulos_v26.sql'],['V29_CASOS_USO','08_casos_uso_v29.sql'],['V30_NEXO','09_nexo_v30.sql'],['V35_PERFILES','10_perfiles_v35.sql'],['V36_PERFIL_PRO','11_perfil_profesional_v36.sql']];
   // Existing V29 has already applied these earlier scripts. Never overwrite user-edited maps.
   if((await client.query("SELECT 1 FROM migraciones_parkia WHERE version='V29_CASOS_USO'")).rowCount){
    for(const [version] of steps.slice(0,4))await client.query('INSERT INTO migraciones_parkia(version) VALUES ($1) ON CONFLICT DO NOTHING',[version]);

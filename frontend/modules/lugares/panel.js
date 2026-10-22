@@ -1,4 +1,4 @@
-import {api} from '../../js/api.js?v=34';
+import {api} from '../../js/api.js?v=36';
 const esc=v=>String(v??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
 const n=v=>Number(v||0);
 const stat=(label,value)=>`<div class="card kpi"><div class="label">${esc(label)}</div><div class="value">${n(value)}</div></div>`;

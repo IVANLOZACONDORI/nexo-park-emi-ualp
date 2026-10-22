@@ -1,4 +1,4 @@
-import {api,fecha,tienePermiso,aviso} from '../../js/api.js?v=34';
+import {api,fecha,tienePermiso,aviso} from '../../js/api.js?v=36';
 const h=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let timer=null;let filtro='';let contenedor=null;
 export async function renderAlertas(c){

@@ -1,0 +1,13 @@
+{
+  "fecha": "2026-10-21T03:44:58.814Z",
+  "navegador": "Chromium headless 134",
+  "entorno": "API real y base temporal PGlite",
+  "pruebas": [
+    "Alta mínima desde tarjeta, guardado real y búsqueda en directorio",
+    "Ocho módulos: tarjetas, apertura de herramientas y retorno",
+    "Edición de perfil, foto, recordatorio oculto y persistencia al recargar",
+    "Sin desbordamiento a 390, 768, 1080 y 1440 px; menú móvil y tema",
+    "Nueva cuenta inicia sesión, recibe recordatorio y conserva sus permisos",
+    "Sin errores JavaScript no controlados"
+  ]
+}

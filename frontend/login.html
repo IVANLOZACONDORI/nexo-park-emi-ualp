@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es">
-<head><meta name="nexo-build" content="34.0.0">
+<head><meta name="nexo-build" content="36.0.0">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Ingreso NEXO PARK · EMI UALP</title>
@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="/css/app.css">
   <link rel="manifest" href="/manifest.webmanifest">
 <link rel="stylesheet" href="/css/nexo.css">
-<link rel="stylesheet" href="/css/workspace32.css?v=32"></head>
-<body>
+<link rel="stylesheet" href="/css/workspace32.css?v=32"><link rel="stylesheet" href="/css/experience36.css?v=36"><link rel="icon" href="/assets/logo/nexo-icon.svg" type="image/svg+xml"></head>
+<body class="login35">
 <button type="button" id="themeToggleLogin" class="btn btn-outline theme-toggle login-theme" aria-label="Cambiar tema">☾ Modo noche</button>
 <main class="login-shell">
   <section class="login-visual" aria-label="Presentación de acceso institucional">
     <div class="login-visual-content">
-      <div class="eyebrow">NEXO PARK · EMI UALP</div><h1>Bienvenido a<br>una movilidad<br><em>más conectada.</em></h1><p>Tu punto de encuentro con los espacios del campus. Ingresa y continúa desde donde lo necesitas.</p><div class="login-benefits"><span>01 &nbsp; Disponibilidad de tu zona asignada</span><span>02 &nbsp; Herramientas según tus funciones</span><span>03 &nbsp; Una experiencia en todos tus dispositivos</span></div>
+      <a class="login-back" href="/">← Portal institucional EMI</a><div class="eyebrow">CONECTA CON TU CAMPUS</div><h1>Tu próximo<br>destino empieza<br><em>aquí.</em></h1><p>Tu punto de encuentro con los espacios del campus. Ingresa y continúa desde donde lo necesitas.</p><div class="login-map-art" aria-hidden="true"><i></i><i></i><i></i><b>P</b><span>EMI / CAMPUS CONECTADO</span></div><div class="login-benefits"><span>01 &nbsp; Disponibilidad de tu zona asignada</span><span>02 &nbsp; Herramientas según tus funciones</span><span>03 &nbsp; Una experiencia en todos tus dispositivos</span></div>
     </div>
   </section>
 
@@ -26,14 +26,14 @@
       </a>
       <div class="login-heading">
         <span class="badge">TU ESPACIO DE TRABAJO</span>
-        <h2>Tu campus. Tu espacio.</h2>
+        <h2>Bienvenido de nuevo.</h2>
         <p>Accede a tus herramientas de gestión y movilidad.</p>
       </div>
 
       <div id="error" class="error hidden" role="alert" aria-live="assertive"></div>
       <div id="status" class="login-status hidden" role="status" aria-live="polite"></div>
 
-      <div id="connectionHelp" class="connection-help" hidden><strong>Recuperar la conexión</strong><p>Inicia el proyecto completo y abre la dirección que muestra la terminal. El CAPTCHA necesita el servidor; una vista de HTML o Live Server no lo genera.</p><a href="http://localhost:4000/login">Abrir servidor local · puerto 4000 ↗</a><p>Si usas otro puerto o un servidor del campus, utiliza su dirección.</p></div>
+      <div id="connectionHelp" class="connection-help" hidden><strong>Recuperar la conexión</strong><p>No podemos conectar con NEXO PARK. Comprueba tu conexión o consulta al administrador del servicio.</p><button type="button" class="btn btn-outline" onclick="location.reload()">Reintentar conexión</button></div>
       <form id="loginForm" novalidate>
         <div class="field">
           <label for="username">USUARIO</label>
@@ -67,10 +67,10 @@
         </button>
       </form>
 
-      <details class="login-help"><summary>¿Necesitas ayuda para ingresar?</summary><p>Solicita tu cuenta o el restablecimiento de tu contraseña al administrador. Si tu cuenta está bloqueada temporalmente, espera el tiempo indicado.</p></details><div class="login-note">Acceso exclusivo para cuentas habilitadas. · V34<div class="login-links"><a href="/parqueos">← NEXO PARK</a><span>·</span><a href="/">Portal EMI</a></div></div>
+      <details class="login-help"><summary>¿Necesitas ayuda para ingresar?</summary><p>Solicita tu cuenta o el restablecimiento de tu contraseña al administrador. Si tu cuenta está bloqueada temporalmente, espera el tiempo indicado.</p></details><div class="login-note">Acceso exclusivo para cuentas habilitadas. · V36<div class="login-links"><a href="/parqueos">← NEXO PARK</a><span>·</span><a href="/">Portal EMI</a></div></div>
     </div>
   </section>
 </main>
-<script type="module" src="/js/auth.js?v=34"></script>
+<script type="module" src="/js/auth.js?v=36"></script>
 </body>
 </html>

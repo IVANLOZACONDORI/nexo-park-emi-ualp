@@ -1,23 +1,27 @@
-import {renderControlPropio} from '../modules/control/propio.js?v=34';
-import { initTheme } from './theme.js?v=34';
-import { api, sesion, tienePermiso } from './api.js?v=34';
-import { renderPanel } from '../modules/lugares/panel.js?v=34';
-import { renderVehiculos } from '../modules/vehiculos/vehiculos.js?v=34';
-import { renderAccesos } from '../modules/control/accesos.js?v=34';
-import { renderParqueos } from '../modules/lugares/parqueos.js?v=34';
-import { renderOcupacion } from '../modules/lugares/ocupacion.js?v=34';
-import { renderAlertas } from '../modules/alertas/alertas.js?v=34';
-import { renderHistorial } from '../modules/control/historial.js?v=34';
-import { renderReportes } from '../modules/reportes/reportes.js?v=34';
-import { renderUsuarios } from '../modules/usuarios/usuarios.js?v=34';
-import { renderAuditoria } from '../modules/auditoria/auditoria.js?v=34';
-import { renderRespaldos } from '../modules/auditoria/respaldos.js?v=34';
-import { renderPropietarios } from '../modules/propietarios/propietarios.js?v=34';
-import { renderAgrupado } from '../shared/agrupado.js?v=34';
+import {initProfile} from './profile.js?v=364';
+import {renderActionCards,actionDetail} from '../shared/actions.js?v=36';
+import {renderControlPropio} from '../modules/control/propio.js?v=36';
+import {renderMiMovilidad} from '../modules/movil/mi-movilidad.js?v=364';
+import {renderEstudiante} from '../modules/movil/estudiante.js?v=364';
+import { initTheme } from './theme.js?v=36';
+import { api, sesion, tienePermiso } from './api.js?v=36';
+import { renderPanel } from '../modules/lugares/panel.js?v=36';
+import { renderVehiculos } from '../modules/vehiculos/vehiculos.js?v=36';
+import { renderAccesos } from '../modules/control/accesos.js?v=36';
+import { renderParqueos } from '../modules/lugares/parqueos.js?v=36';
+import { renderOcupacion } from '../modules/lugares/ocupacion.js?v=36';
+import { renderAlertas } from '../modules/alertas/alertas.js?v=36';
+import { renderHistorial } from '../modules/control/historial.js?v=36';
+import { renderReportes } from '../modules/reportes/reportes.js?v=36';
+import { renderUsuarios } from '../modules/usuarios/usuarios.js?v=36';
+import { renderAuditoria } from '../modules/auditoria/auditoria.js?v=36';
+import { renderRespaldos } from '../modules/auditoria/respaldos.js?v=36';
+import { renderPropietarios } from '../modules/propietarios/propietarios.js?v=36';
+import { renderAgrupado } from '../shared/agrupado.js?v=36';
 
 const c = document.getElementById('content');
 const menu = document.getElementById('menu');
-function icon(id){const paths={usuarios:'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M20 8v6m-3-3h6',reportes:'M4 3h12l4 4v14H4ZM8 16v-4m4 4V8m4 8v-6',propietarios:'M3 4h18v16H3ZM7 9h3m-3 6h10m-3-6h3',vehiculos:'M3 16V9l3-5h12l3 5v7ZM3 10h18M6 16v4m12-4v4M6 13h1m10 0h1',lugares:'M3 3h7v7H3ZM14 3h7v7h-7ZM3 14h7v7H3ZM14 14h7v7h-7Z',control:'M4 7h15m-4-4 4 4-4 4M20 17H5m4-4-4 4 4 4',alertas:'M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M9 21h6',auditoria:'M12 3 3 7v6c0 5 9 8 9 8s9-3 9-8V7ZM8 12l3 3 5-6',movil:'M7 2h10v20H7ZM10 18h4'};return '<svg viewBox="0 0 24 24" class="menu-icon"><path d="'+paths[id]+'"/></svg>'}
+function icon(id){const paths={usuarios:'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M20 8v6m-3-3h6',reportes:'M4 3h12l4 4v14H4ZM8 16v-4m4 4V8m4 8v-6',propietarios:'M3 4h18v16H3ZM7 9h3m-3 6h10m-3-6h3',vehiculos:'M3 16V9l3-5h12l3 5v7ZM3 10h18M6 16v4m12-4v4M6 13h1m10 0h1',lugares:'M3 3h7v7H3ZM14 3h7v7h-7ZM3 14h7v7H3ZM14 14h7v7h-7Z',control:'M4 7h15m-4-4 4 4-4 4M20 17H5m4-4-4 4 4 4',alertas:'M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M9 21h6',auditoria:'M12 3 3 7v6c0 5 9 8 9 8s9-3 9-8V7ZM8 12l3 3 5-6',movil:'M7 2h10v20H7ZM10 18h4','mi-movilidad':'M3 16V9l3-5h12l3 5v7ZM3 10h18M6 16v4m12-4v4M6 13h1m10 0h1'};return '<svg viewBox="0 0 24 24" class="menu-icon"><path d="'+paths[id]+'"/></svg>'}
 
 
 async function cerrarSesion() {
@@ -62,10 +66,15 @@ async function iniciarAplicacion() {
   document.getElementById('welcomeName').textContent = 'Hola, ' + (u.nombreCompleto || 'bienvenido').trim().split(/\s+/)[0] + '.';
   document.getElementById('welcomeRole').textContent = u.nombreRol;
   document.getElementById('workspaceDate').textContent = new Intl.DateTimeFormat('es-BO', {weekday:'long', day:'numeric', month:'long', timeZone:'America/La_Paz'}).format(new Date());
-  document.getElementById('welcomeDescription').textContent = u.rol === 'PROPIETARIO' ? 'Revisa los movimientos de tus vehículos desde un solo lugar.' : 'Supervisa los espacios del campus y encuentra tus herramientas de trabajo.';
+  let contextoMovil={tieneVehiculo:false,accesos:[]};
+  try{contextoMovil=await api('/movil/contexto')}catch{}
+  document.getElementById('welcomeDescription').textContent = contextoMovil.tieneVehiculo ? 'Consulta tus espacios disponibles, movimientos personales y herramientas autorizadas desde un solo lugar.' : 'Supervisa los espacios del campus y encuentra tus herramientas de trabajo.';
 
-  // Ocho módulos web activos. El noveno (móvil) queda reservado para una fase posterior.
+  void initProfile();
+
   const modulos = [
+    ...(u.rol==='PROPIETARIO'?[{ id:'movil', label:'Parqueos disponibles', icon:'movil', grupo:'MI CUENTA', perm:'estudiante.mi_parqueo', render:(pane)=>renderEstudiante(pane) }]:[]),
+    ...(contextoMovil.tieneVehiculo?[{ id:'mi-movilidad', label:'Mi movilidad', icon:'movil', grupo:'MI CUENTA', perm:null, render:(pane)=>renderMiMovilidad(pane) }]:[]),
     { id:'usuarios', label:'Gestión de usuarios', icon:'♙', grupo:'GESTIÓN INSTITUCIONAL', perm:'usuarios.gestionar', render:(pane)=>renderUsuarios(pane) },
     { id:'reportes', label:'Informes y reportes', icon:'▥', grupo:'GESTIÓN INSTITUCIONAL', perm:'reportes.generar', render:(pane)=>renderReportes(pane) },
     { id:'propietarios', label:'Registro de propietarios', icon:'♧', grupo:'GESTIÓN INSTITUCIONAL', perm:'propietarios.ver', render:(pane)=>renderPropietarios(pane) },
@@ -74,11 +83,11 @@ async function iniciarAplicacion() {
     { id:'control', label:'Control de ingreso y salida', icon:'◉', grupo:'OPERACIÓN', perm:['acceso.ver','historial.ver','acceso.propio'], render:(pane)=>u.rol==='PROPIETARIO'?renderControlPropio(pane):renderAgrupado(pane,[{nombre:'Ingresos y salidas',perm:'acceso.ver',render:(pane)=>renderAccesos(pane)},{nombre:'Historial y trazabilidad',perm:'historial.ver',render:(pane)=>renderHistorial(pane)}]) },
     { id:'alertas', label:'Alertas y notificaciones', icon:'⚠', grupo:'OPERACIÓN', perm:'alertas.ver', render:(pane)=>renderAlertas(pane) },
     { id:'auditoria', label:'Auditoría y control', icon:'✓', grupo:'CONTROL Y ACCESO', perm:['auditoria.ver','respaldos.gestionar'], render:(pane)=>renderAgrupado(pane,[{nombre:'Auditoría',perm:'auditoria.ver',render:(pane)=>renderAuditoria(pane)},{nombre:'Respaldo y continuidad',perm:'respaldos.gestionar',render:(pane)=>renderRespaldos(pane)}]) },
-  ].filter(m => (Array.isArray(m.perm)?m.perm.some(p=>tienePermiso(p)):tienePermiso(m.perm)));
+  ].filter(m => m.perm===null || (Array.isArray(m.perm)?m.perm.some(p=>tienePermiso(p)):tienePermiso(m.perm)));
 
   const quick = document.getElementById('quickActions');
-  const quickLabels={lugares:'Supervisar espacios',control:'Ingresos y salidas',reportes:'Ver reportes',vehiculos:'Consultar vehículos',usuarios:'Gestionar usuarios',alertas:'Revisar alertas',auditoria:'Consultar auditoría',propietarios:'Ver propietarios'};
-  const priority=u.rol==='PROPIETARIO'?['control']:['lugares','control','reportes','alertas','vehiculos','usuarios','auditoria','propietarios'];
+  const quickLabels={'movil':'Ver parqueos disponibles','mi-movilidad':'Ver mi movilidad',lugares:'Supervisar espacios',control:'Ingresos y salidas',reportes:'Ver reportes',vehiculos:'Consultar vehículos',usuarios:'Gestionar usuarios',alertas:'Revisar alertas',auditoria:'Consultar auditoría',propietarios:'Ver titulares'};
+  const priority=u.rol==='PROPIETARIO'?(contextoMovil.tieneVehiculo?['mi-movilidad','movil','control','vehiculos']:['movil','control']):(contextoMovil.tieneVehiculo?['mi-movilidad','lugares','control','reportes','alertas','vehiculos','usuarios','auditoria','propietarios']:['lugares','control','reportes','alertas','vehiculos','usuarios','auditoria','propietarios']);
   for (const id of priority.filter(id=>modulos.some(m=>m.id===id)).slice(0,4)) {
     const m=modulos.find(m=>m.id===id), b=document.createElement('button');
     b.className='quick-action'; b.dataset.quick=id;
@@ -126,7 +135,12 @@ async function iniciarAplicacion() {
     const pane=document.createElement('div');pane.dataset.moduloActivo=m.id;
     pane.innerHTML=c.innerHTML;c.replaceChildren(pane);
     try {
-      await m.render(pane);
+      if(m.id==='mi-movilidad'||m.id==='movil')await m.render(pane);
+      else if(['usuarios','lugares','control','auditoria'].includes(m.id)&&!(m.id==='control'&&u.rol==='PROPIETARIO'))await m.render(pane);
+      else {
+        const info={reportes:['Generar y consultar reportes','Filtra la información y prepara tus informes con vista previa PDF.','chart'],propietarios:['Administrar propietarios','Registra y consulta las personas vinculadas a los vehículos.','people'],vehiculos:['Administrar vehículos','Consulta registros, autorizaciones y datos del parque automotor.','car'],alertas:['Revisar notificaciones','Consulta incidentes y realiza el seguimiento de las alertas.','bell'],control:['Consultar mis movimientos','Revisa los ingresos y salidas de tus vehículos.','flow']}[m.id];
+        const home=()=>renderActionCards(pane,{title:m.label,actions:[{title:info[0],description:info[1],icon:info[2],run:async()=>{const host=actionDetail(pane,info[0],home);host.innerHTML='<div class="skeleton" role="status" aria-label="Cargando herramienta"><i></i><i></i></div>';try{await m.render(host)}catch(e){host.textContent=e.message;}}}]});home();
+      }
     } catch (e) {
       if(thisVersion===navigationVersion && c.dataset.moduloActivo===m.id){
         c.replaceChildren();const card=document.createElement('div');card.className='card panel';
@@ -139,7 +153,7 @@ async function iniciarAplicacion() {
   }
 
   const wanted = location.hash.slice(1);
-  const defaultId = u.rol === 'PROPIETARIO' ? 'control' : (modulos.find(m=>m.id==='lugares')?'lugares':modulos[0]?.id);
+  const defaultId = u.rol === 'PROPIETARIO' ? (contextoMovil.tieneVehiculo ? 'mi-movilidad' : 'movil') : (contextoMovil.tieneVehiculo ? 'mi-movilidad' : (u.rol === 'PROPIETARIO' ? 'control' : (modulos.find(m=>m.id==='lugares')?'lugares':modulos[0]?.id)));
   const initial = modulos.find(m => m.id === wanted) || modulos.find(m=>m.id===defaultId) || modulos[0];
   if (initial) navegar(initial);
   else c.innerHTML = '<div class="card panel"><h3>Sin módulos asignados</h3><p>Contacte al administrador del sistema.</p></div>';

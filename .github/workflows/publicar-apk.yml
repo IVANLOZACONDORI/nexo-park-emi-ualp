@@ -1,0 +1,50 @@
+name: Publicar APK NEXO PARK
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Configurar Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Compilar APK instalable
+        working-directory: mobile/android-app
+        run: gradle assembleDebug
+
+      - name: Preparar APK de NEXO PARK
+        run: cp mobile/android-app/app/build/outputs/apk/debug/app-debug.apk NEXO_PARK.apk
+
+      - name: Crear o actualizar descarga fija
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view app-movil >/dev/null 2>&1; then
+            gh release upload app-movil NEXO_PARK.apk --clobber
+          else
+            gh release create app-movil NEXO_PARK.apk \
+              --title "NEXO PARK · App Android" \
+              --notes "Aplicación Android de NEXO PARK. Muestra disponibilidad, historial personal y herramientas según la cuenta autenticada."
+          fi
+
+      - name: Guardar APK como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: NEXO-PARK-APK
+          path: NEXO_PARK.apk

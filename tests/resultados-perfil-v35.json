@@ -1,0 +1,13 @@
+{
+  "fecha": "2026-10-21T03:44:10.152Z",
+  "entorno": "API Express con PostgreSQL compatible PGlite, base temporal",
+  "pruebas": [
+    "Perfil protegido sin sesión",
+    "Alta mínima y plazo de 3 días persistente",
+    "Validación de datos y rechazo de foto no admitida",
+    "Perfil completo sin elevar permisos ni modificar otra cuenta",
+    "Fotografía procesada y persistente después de cerrar sesión",
+    "Eliminar fotografía",
+    "Propietario accede a su perfil conservando aislamiento"
+  ]
+}

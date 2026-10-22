@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#082d43">
+  <title>NEXO PARK · App móvil</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/nexo.css">
+  <link rel="stylesheet" href="/css/mobility362.css?v=362">
+  <link rel="stylesheet" href="/css/mobileapp362.css?v=362">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/assets/logo/nexo-icon.svg" type="image/svg+xml">
+</head>
+<body class="mobile-app-body">
+  <header class="mobile-app-header">
+    <a class="mobile-app-brand" href="/movil" aria-label="Inicio NEXO PARK"><img src="/assets/logo/nexo-wordmark.svg" alt="NEXO PARK"></a>
+    <div class="mobile-app-account"><span id="mobileUser">Validando cuenta…</span><small id="mobileRole">EMI UALP</small></div>
+    <button id="mobileLogout" class="mobile-app-logout">Salir</button>
+  </header>
+  <main class="mobile-app-main">
+    <section class="mobile-app-intro">
+      <span>EMI UALP · MOVILIDAD CONECTADA</span>
+      <h1>Tu parqueo, en tiempo real.</h1>
+      <p>Consulta lugares disponibles, revisa tus movimientos y accede únicamente a las funciones autorizadas para tu cuenta.</p>
+    </section>
+    <div id="mobileMobility"><div class="mobility-loading"><i></i><strong>Preparando tu movilidad…</strong></div></div>
+    <section id="mobileRoleTools" class="mobile-role-tools" hidden>
+      <div class="mobile-role-head"><span>HERRAMIENTAS DE TU ROL</span><h2>Accesos institucionales</h2><p>Estas funciones dependen de los permisos asignados a tu cuenta.</p></div>
+      <div id="mobileRoleGrid" class="mobile-role-grid"></div>
+    </section>
+  </main>
+  <nav class="mobile-bottom-nav" aria-label="Navegación móvil">
+    <a href="/movil" class="active">Mi movilidad</a>
+    <a href="/sistema">Sistema completo</a>
+    <button id="mobileRefresh">Actualizar</button>
+  </nav>
+  <script type="module" src="/js/mobileapp362.js?v=362"></script>
+</body>
+</html>

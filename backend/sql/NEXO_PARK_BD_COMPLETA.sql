@@ -784,3 +784,35 @@ INSERT INTO roles_permisos(rol_id,permiso_id) SELECT r.id,p.id FROM roles r CROS
 
 CREATE TABLE IF NOT EXISTS migraciones_parkia(version VARCHAR(30) PRIMARY KEY,aplicada_en TIMESTAMPTZ DEFAULT NOW());
 INSERT INTO migraciones_parkia(version) VALUES ('V11_ALERTAS'),('V15_AUDITORIA'),('V17_MAPEO'),('V26_MAPA'),('V29_CASOS_USO'),('V30_NEXO') ON CONFLICT DO NOTHING;
+
+-- V35: perfil personal y plazo de actualización
+-- Actualización aditiva: conserva cuentas y registros existentes.
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS telefono VARCHAR(30);
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS foto_perfil TEXT;
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS perfil_completado_en TIMESTAMPTZ;
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS perfil_limite_en TIMESTAMPTZ;
+-- Las cuentas anteriores reciben un recordatorio, sin bloqueo de acceso.
+UPDATE usuarios SET perfil_limite_en=NOW()+INTERVAL '7 days' WHERE perfil_limite_en IS NULL AND perfil_completado_en IS NULL;
+
+ALTER TABLE usuarios ALTER COLUMN perfil_limite_en SET DEFAULT (NOW()+INTERVAL '7 days');
+UPDATE configuracion_sistema SET valor=jsonb_set(valor,'{version}','"35.0.0"'::jsonb) WHERE clave='identidad_sistema';
+
+INSERT INTO migraciones_parkia(version) VALUES ('V35_PERFILES') ON CONFLICT DO NOTHING;
+
+
+-- V36: perfil profesional ampliado y CV PDF
+-- V36: perfil profesional ampliado y CV PDF. Migración aditiva e idempotente.
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS correo_personal VARCHAR(170);
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS celular VARCHAR(30);
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS direccion_residencia VARCHAR(220);
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS fecha_nacimiento DATE;
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS numero_referencia VARCHAR(30);
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS profesion VARCHAR(120);
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS grado_especialidad VARCHAR(160);
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS cv_pdf BYTEA;
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS cv_nombre VARCHAR(255);
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS cv_actualizado_en TIMESTAMPTZ;
+CREATE INDEX IF NOT EXISTS ix_usuarios_correo_personal_ci ON usuarios(LOWER(correo_personal)) WHERE correo_personal IS NOT NULL;
+UPDATE configuracion_sistema SET valor=jsonb_set(valor,'{version}','"36.0.0"'::jsonb) WHERE clave='identidad_sistema';
+
+INSERT INTO migraciones_parkia(version) VALUES ('V36_PERFIL_PRO') ON CONFLICT DO NOTHING;

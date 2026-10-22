@@ -12,20 +12,20 @@ $baseUrl = "http://localhost:$portValue"
 $existing = $null
 try { $existing = Invoke-RestMethod "$baseUrl/api/health" -TimeoutSec 3 } catch {}
 if ($existing) {
- if ($existing.version -ne '34.0.0') { throw "Hay otra version iniciada en $baseUrl. Detenga su terminal con Ctrl+C (o su contenedor Docker) y vuelva a ejecutar este archivo." }
+ if ($existing.version -ne '35.0.0') { throw "Hay otra version iniciada en $baseUrl. Detenga su terminal con Ctrl+C (o su contenedor Docker) y vuelva a ejecutar este archivo." }
 } else {
  $nodeProcess = Start-Process -FilePath 'node' -ArgumentList 'src/server.js' -WorkingDirectory $backendRoot -PassThru
  $ready = $false
  for ($attempt=0; $attempt -lt 45; $attempt++) {
   Start-Sleep -Seconds 1
   if ($nodeProcess.HasExited) { throw 'El servidor no pudo iniciar. Revise el error de PostgreSQL/configuracion en la terminal.' }
-  try { $status = Invoke-RestMethod "$baseUrl/api/health" -TimeoutSec 2; if ($status.version -eq '34.0.0') { $ready=$true; break } } catch {}
+  try { $status = Invoke-RestMethod "$baseUrl/api/health" -TimeoutSec 2; if ($status.version -eq '35.0.0') { $ready=$true; break } } catch {}
  }
  if (!$ready) { throw 'El servidor sigue sin responder. Revise la terminal; no abra la pagina con Live Server.' }
 }
 $loginPage=Invoke-WebRequest "$baseUrl/login" -UseBasicParsing -TimeoutSec 5
-if (!$loginPage.Content.Contains('name="nexo-build" content="34.0.0"')) { throw 'El backend esta sirviendo un frontend antiguo. Revise FRONTEND_DIR en backend/.env y copie todo el frontend V34.' }
+if (!$loginPage.Content.Contains('name="nexo-build" content="35.0.0"')) { throw 'El backend esta sirviendo un frontend antiguo. Revise FRONTEND_DIR en backend/.env y copie todo el frontend V35.' }
 $challenge=Invoke-RestMethod "$baseUrl/api/autenticacion/captcha" -TimeoutSec 5
 if (!$challenge.token -or !$challenge.question) { throw 'El servidor no devuelve un CAPTCHA valido.' }
-Write-Host 'Servidor V34 y CAPTCHA comprobados. Abriendo inicio institucional EMI.'
+Write-Host 'Servidor V35 y CAPTCHA comprobados. Abriendo inicio institucional EMI.'
 Start-Process "$baseUrl/"

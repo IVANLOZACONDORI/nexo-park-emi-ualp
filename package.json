@@ -1,8 +1,8 @@
 {
   "name": "nexo-park-emi-ualp",
-  "version": "34.0.0",
+  "version": "36.4.0",
   "private": true,
-  "description": "NEXO PARK EMI UALP — nueve módulos y siete actores",
+  "description": "NEXO PARK EMI UALP — V36.4 con CV restringido a personal administrativo, militar y autoridades; propietarios sin solicitud de currículum",
   "scripts": {
     "start": "npm --prefix backend start",
     "dev": "npm --prefix backend run dev",
@@ -12,6 +12,7 @@
     "test:integration": "node tests/integration.mjs",
     "admin:create": "npm --prefix backend run admin:create",
     "diagnostico": "node scripts/diagnostico.mjs",
-    "test:captcha": "node --test tests/captcha.test.mjs"
+    "test:captcha": "node --test tests/captcha.test.mjs",
+    "test:profile": "node tests/profile-v36.mjs"
   }
 }

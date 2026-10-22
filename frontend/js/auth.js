@@ -1,5 +1,5 @@
-import { initTheme } from './theme.js?v=34';
-import { api, sesion } from './api.js?v=34';
+import { initTheme } from './theme.js?v=36';
+import { api, sesion } from './api.js?v=36';
 
 let captchaToken = '';
 let countdownTimer = null;
@@ -22,6 +22,11 @@ const loginButtonText = document.getElementById('loginButtonText');
 const loginSpinner = document.getElementById('loginSpinner');
 const togglePassword = document.getElementById('togglePassword');
 const capsWarning = document.getElementById('capsWarning');
+
+function destinoSeguro(){
+  const next=new URLSearchParams(location.search).get('next');
+  return ['/movil','/sistema'].includes(next)?next:'/sistema';
+}
 
 function setLoading(loading) {
   submitting = loading;
@@ -160,7 +165,7 @@ form.addEventListener('submit', async e => {
     });
     sesion.guardar(data);
     showStatus('Acceso correcto. Ingresando al sistema...');
-    location.replace('/sistema');
+    location.replace(destinoSeguro());
   } catch (ex) {
     if (ex.status === 423 && ex.data?.retryAfterSeconds) {
       iniciarCuentaRegresiva(ex.data.retryAfterSeconds);
@@ -181,7 +186,7 @@ async function iniciar() {
     try {
       const data = await api('/autenticacion/yo');
       sesion.actualizarUsuario(data.usuario);
-      location.replace('/sistema');
+      location.replace(destinoSeguro());
       return;
     } catch {
       sesion.limpiar();

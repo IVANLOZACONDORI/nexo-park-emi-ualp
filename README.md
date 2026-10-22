@@ -1,3 +1,25 @@
+# NEXO PARK EMI UALP · V36.4
+
+> **V36.4:** el currículum PDF dejó de solicitarse a propietarios (estudiantes y docentes). Solo está disponible para personal administrativo, militar y autoridades. Se conserva la navegación V36.3. Ver `LEEME_V36_4.md`.
+
+Versión mejorada con app móvil comercial integrada en `Infraestructura > Parqueos`, movilidad personal para toda cuenta con vehículo, disponibilidad compatible auto/moto en tiempo real e historial personal de ingresos/salidas.
+
+Consulta `LEEME_V36_2_APP_MOVIL.md` para cambios y compilación de la APK.
+
+---
+
+# NEXO PARK V36 · Identidad visual y ficha profesional
+
+**Empieza por [LEEME_V36.md](LEEME_V36.md).** Esta es la versión vigente de esta entrega. Incluye logo V36, interfaz ampliada, perfil profesional, CV PDF, backend y migración PostgreSQL aditiva.
+
+---
+
+# NEXO PARK V35 · Experiencia y perfiles
+
+**Empieza por [LEEME_V35.md](LEEME_V35.md).** Esta es la versión vigente de esta entrega. Incluye la aplicación completa, backend, SQL y documentación anterior de referencia.
+
+---
+
 # NEXO PARK V34
 
 Comience por [LEEME_V34.md](LEEME_V34.md). Ejecute INICIAR_NEXO.cmd para abrir el inicio institucional.
