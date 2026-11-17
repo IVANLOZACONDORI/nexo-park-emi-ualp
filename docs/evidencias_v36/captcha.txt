@@ -1,0 +1,12 @@
+✔ CAPTCHA: respuesta correcta, incorrecta y tiempo de vigencia (4.1489ms)
+✔ CAPTCHA: cero válido no permite campos vacíos ni otros tipos (1.2123ms)
+✔ CAPTCHA: tokens vencidos, alterados o de otro tipo se rechazan (0.5282ms)
+✔ CAPTCHA: duración heredada en segundos y configuración inválida (0.5271ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 162.4295

@@ -1,118 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="660" viewBox="0 0 1140 660" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="660" viewBox="0 0 1140 660" font-family="Calibri,Arial,sans-serif">
 <title>ADV-3. Modelo de interfaz abstracta — Registro de propietarios</title>
 <defs>
   <marker id="arr-open" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M1,1 L11,6 L1,11" fill="none" stroke="#1f2933" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1,1 L11,6 L1,11" fill="none" stroke="#000000" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
   </marker>
   <marker id="arr-fill" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M1,1 L11,6 L1,11 Z" fill="#1f2933" stroke="#1f2933" stroke-width="1.2" stroke-linejoin="round"/>
+    <path d="M1,1 L11,6 L1,11 Z" fill="#000000" stroke="#000000" stroke-width="1.2" stroke-linejoin="round"/>
   </marker>
   <marker id="arr-thin" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M2,2 L10,6 L2,10" fill="none" stroke="#1f2933" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2,2 L10,6 L2,10" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
   </marker>
   <marker id="arr-dep" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M1,1 L11,6 L1,11" fill="#ffffff" stroke="#1f2933" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M1,1 L11,6 L1,11" fill="#ffffff" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"/>
   </marker>
 </defs>
-<g><text x="570" y="14" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">ADV-3. Modelo de interfaz</text>
-<text x="570" y="36" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">abstracta — Registro de</text>
-<text x="570" y="58" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">propietarios</text></g>
-<g><text x="570" y="47" font-size="11.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">M03 · Vistas de datos,</text>
-<text x="570" y="61" font-size="11.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">atributos y acciones</text></g>
-<line x1="NaN" y1="NaN" x2="570" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="NaN" y="NaN" width="32.75" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="NaN" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">nuevo</text></g></g>
-<line x1="200" y1="NaN" x2="200" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="171.25" y="NaN" width="57.5" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="200" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">selecciona</text></g></g>
-<line x1="NaN" y1="NaN" x2="570" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="NaN" y="NaN" width="32.75" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="NaN" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">edita</text></g></g>
-<line x1="570" y1="NaN" x2="570" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="546.2" y="NaN" width="47.6" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="570" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">consulta</text></g></g>
-<line x1="NaN" y1="NaN" x2="940" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="NaN" y="NaN" width="47.6" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="NaN" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">registra</text></g></g>
-<line x1="NaN" y1="NaN" x2="940" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="NaN" y="NaN" width="47.6" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="NaN" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">verifica</text></g></g>
-<rect x="60" y="120" width="280" height="166" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="60" y="120" width="280" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="200" y="139" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">ListaPropietariosADV</text></g>
-<line x1="60" y1="150" x2="340" y2="150" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="68" y="167" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">filtro: texto</text></g>
-<g><text x="68" y="180" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">items: Propietario[]</text></g>
-<g><text x="68" y="193" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">zonas: Zona[]</text></g>
-<g><text x="68" y="206" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">permisoGestionar: bool</text></g>
-<line x1="60" y1="212" x2="340" y2="212" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="68" y="227" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">buscar()</text></g>
-<g><text x="68" y="240" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">listar()</text></g>
-<g><text x="68" y="253" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">seleccionar(id)</text></g>
-<g><text x="68" y="266" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">nuevo()</text></g>
-<rect x="420" y="120" width="300" height="205" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="420" y="120" width="300" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="570" y="139" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">FormularioPropietarioADV</text></g>
-<line x1="420" y1="150" x2="720" y2="150" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="428" y="167" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">nombreCompleto</text></g>
-<g><text x="428" y="180" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">nombreUsuario</text></g>
-<g><text x="428" y="193" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">contrasena</text></g>
-<g><text x="428" y="206" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">correo</text></g>
-<g><text x="428" y="219" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">tipo: ESTUDIANTE|DOCENTE</text></g>
-<g><text x="428" y="232" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">zonaId</text></g>
-<g><text x="428" y="245" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">estado</text></g>
-<line x1="420" y1="251" x2="720" y2="251" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="428" y="266" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">validar()</text></g>
-<g><text x="428" y="279" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">cargarZonas()</text></g>
-<g><text x="428" y="292" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">guardar()</text></g>
-<g><text x="428" y="305" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">cancelar()</text></g>
-<rect x="60" y="360" width="280" height="179" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="60" y="360" width="280" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="200" y="379" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">DetallePropietarioADV</text></g>
-<line x1="60" y1="390" x2="340" y2="390" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="68" y="407" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">id</text></g>
-<g><text x="68" y="420" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">usuario</text></g>
-<g><text x="68" y="433" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">tipo</text></g>
-<g><text x="68" y="446" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">zona</text></g>
-<g><text x="68" y="459" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">vehiculos</text></g>
-<g><text x="68" y="472" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">estado</text></g>
-<line x1="60" y1="478" x2="340" y2="478" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="68" y="493" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">editar()</text></g>
-<g><text x="68" y="506" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">habilitar()</text></g>
-<g><text x="68" y="519" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">deshabilitar()</text></g>
-<rect x="420" y="360" width="300" height="140" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="420" y="360" width="300" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="570" y="379" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">ZonaADV</text></g>
-<line x1="420" y1="390" x2="720" y2="390" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="428" y="407" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">id</text></g>
-<g><text x="428" y="420" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">codigo</text></g>
-<g><text x="428" y="433" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">nombre</text></g>
-<g><text x="428" y="446" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">estado = ACTIVA</text></g>
-<g><text x="428" y="459" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">tipo = ESTUDIANTES</text></g>
-<line x1="420" y1="465" x2="720" y2="465" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="428" y="480" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">listar()</text></g>
-<rect x="800" y="120" width="280" height="127" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="800" y="120" width="280" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="940" y="139" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">AuditoriaADV</text></g>
-<line x1="800" y1="150" x2="1080" y2="150" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="808" y="167" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">accion</text></g>
-<g><text x="808" y="180" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">usuario</text></g>
-<g><text x="808" y="193" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">fecha</text></g>
-<g><text x="808" y="206" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">detalle</text></g>
-<line x1="800" y1="212" x2="1080" y2="212" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="808" y="227" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">registrar()</text></g>
-<rect x="800" y="360" width="280" height="101" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="800" y="360" width="280" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="940" y="379" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">PermisoADV</text></g>
-<line x1="800" y1="390" x2="1080" y2="390" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="808" y="407" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">propietarios.ver</text></g>
-<g><text x="808" y="420" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">propietarios.gestionar</text></g>
-<line x1="800" y1="426" x2="1080" y2="426" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="808" y="441" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">verificar()</text></g>
-<g><line x1="50" y1="608" x2="76" y2="608" stroke="#1f2933" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><text x="82" y="605" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">Relación de observación /</text>
-<text x="82" y="618" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">actualización</text></g>
-<line x1="326.4" y1="608" x2="352.4" y2="608" stroke="#1f2933" stroke-width="1.3" stroke-linecap="round"/>
-<g><text x="358.4" y="605" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">ADV: atributos (arriba) y</text>
-<text x="358.4" y="618" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">acciones (abajo)</text></g></g>
-<g><text x="570" y="621" font-size="9.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">La ADV separa la vista de</text>
-<text x="570" y="633" font-size="9.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">lista, el formulario y el</text>
-<text x="570" y="645" font-size="9.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">detalle; la zona y el permiso</text>
-<text x="570" y="657" font-size="9.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">son vistas de apoyo del</text>
-<text x="570" y="670" font-size="9.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">proceso.</text></g>
+
+
+<line x1="340" y1="210.3783783783784" x2="420" y2="214.59459459459458" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="363.63" y="195.36" width="32.75" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="380" y="207" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">nuevo</text></g></g>
+<line x1="200" y1="286" x2="200" y2="360" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="171.25" y="305.88" width="57.5" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="200" y="317" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">selecciona</text></g></g>
+<line x1="340" y1="363.6081081081081" x2="420" y2="314.52702702702703" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="363.63" y="321.94" width="32.75" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="380" y="333" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">edita</text></g></g>
+<line x1="570" y1="325" x2="570" y2="360" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="546.2" y="325.38" width="47.6" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="570" y="337" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">consulta</text></g></g>
+<line x1="720" y1="206.6891891891892" x2="800" y2="198.25675675675677" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="736.2" y="185.35" width="47.6" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="760" y="197" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">registra</text></g></g>
+<line x1="340" y1="242.25675675675677" x2="800" y2="371.2432432432432" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="546.2" y="289.63" width="47.6" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="570" y="301" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">verifica</text></g></g>
+<rect x="60" y="120" width="280" height="166" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="60" y="120" width="280" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="200" y="139" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">ListaPropietariosADV</text></g>
+<line x1="60" y1="150" x2="340" y2="150" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="68" y="167" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">filtro: texto</text></g>
+<g><text x="68" y="180" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">items: Propietario[]</text></g>
+<g><text x="68" y="193" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">zonas: Zona[]</text></g>
+<g><text x="68" y="206" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">permisoGestionar: bool</text></g>
+<line x1="60" y1="212" x2="340" y2="212" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="68" y="227" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">buscar()</text></g>
+<g><text x="68" y="240" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">listar()</text></g>
+<g><text x="68" y="253" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">seleccionar(id)</text></g>
+<g><text x="68" y="266" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">nuevo()</text></g>
+<rect x="420" y="120" width="300" height="205" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="420" y="120" width="300" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="570" y="139" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">FormularioPropietarioADV</text></g>
+<line x1="420" y1="150" x2="720" y2="150" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="428" y="167" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">nombreCompleto</text></g>
+<g><text x="428" y="180" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">nombreUsuario</text></g>
+<g><text x="428" y="193" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">contrasena</text></g>
+<g><text x="428" y="206" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">correo</text></g>
+<g><text x="428" y="219" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">tipo: ESTUDIANTE|DOCENTE</text></g>
+<g><text x="428" y="232" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">zonaId</text></g>
+<g><text x="428" y="245" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">estado</text></g>
+<line x1="420" y1="251" x2="720" y2="251" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="428" y="266" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">validar()</text></g>
+<g><text x="428" y="279" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">cargarZonas()</text></g>
+<g><text x="428" y="292" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">guardar()</text></g>
+<g><text x="428" y="305" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">cancelar()</text></g>
+<rect x="60" y="360" width="280" height="179" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="60" y="360" width="280" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="200" y="379" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">DetallePropietarioADV</text></g>
+<line x1="60" y1="390" x2="340" y2="390" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="68" y="407" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">id</text></g>
+<g><text x="68" y="420" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">usuario</text></g>
+<g><text x="68" y="433" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">tipo</text></g>
+<g><text x="68" y="446" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">zona</text></g>
+<g><text x="68" y="459" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">vehiculos</text></g>
+<g><text x="68" y="472" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">estado</text></g>
+<line x1="60" y1="478" x2="340" y2="478" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="68" y="493" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">editar()</text></g>
+<g><text x="68" y="506" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">habilitar()</text></g>
+<g><text x="68" y="519" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">deshabilitar()</text></g>
+<rect x="420" y="360" width="300" height="140" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="420" y="360" width="300" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="570" y="379" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">ZonaADV</text></g>
+<line x1="420" y1="390" x2="720" y2="390" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="428" y="407" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">id</text></g>
+<g><text x="428" y="420" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">codigo</text></g>
+<g><text x="428" y="433" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">nombre</text></g>
+<g><text x="428" y="446" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">estado = ACTIVA</text></g>
+<g><text x="428" y="459" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">tipo = ESTUDIANTES</text></g>
+<line x1="420" y1="465" x2="720" y2="465" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="428" y="480" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">listar()</text></g>
+<rect x="800" y="120" width="280" height="127" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="800" y="120" width="280" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="940" y="139" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">AuditoriaADV</text></g>
+<line x1="800" y1="150" x2="1080" y2="150" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="808" y="167" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">accion</text></g>
+<g><text x="808" y="180" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">usuario</text></g>
+<g><text x="808" y="193" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">fecha</text></g>
+<g><text x="808" y="206" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">detalle</text></g>
+<line x1="800" y1="212" x2="1080" y2="212" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="808" y="227" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">registrar()</text></g>
+<rect x="800" y="360" width="280" height="101" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="800" y="360" width="280" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="940" y="379" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">PermisoADV</text></g>
+<line x1="800" y1="390" x2="1080" y2="390" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="808" y="407" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">propietarios.ver</text></g>
+<g><text x="808" y="420" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">propietarios.gestionar</text></g>
+<line x1="800" y1="426" x2="1080" y2="426" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="808" y="441" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">verificar()</text></g>
+
+<g><text x="570" y="621" font-size="9.5" fill="#333333" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">La ADV separa la vista de</text>
+<text x="570" y="633" font-size="9.5" fill="#333333" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">lista, el formulario y el</text>
+<text x="570" y="645" font-size="9.5" fill="#333333" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">detalle; la zona y el permiso</text>
+<text x="570" y="657" font-size="9.5" fill="#333333" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">son vistas de apoyo del</text>
+<text x="570" y="670" font-size="9.5" fill="#333333" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">proceso.</text></g>
 </svg>

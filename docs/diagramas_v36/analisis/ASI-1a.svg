@@ -1,82 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1010" height="1140" viewBox="0 0 1010 1140" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1010" height="1140" viewBox="0 0 1010 1140" font-family="Calibri,Arial,sans-serif">
 <title>ASI-1a. Diagrama de actividad UML — Situación actual del parqueo</title>
 <defs>
   <marker id="arr-open" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M1,1 L11,6 L1,11" fill="none" stroke="#1f2933" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1,1 L11,6 L1,11" fill="none" stroke="#000000" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
   </marker>
   <marker id="arr-fill" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M1,1 L11,6 L1,11 Z" fill="#1f2933" stroke="#1f2933" stroke-width="1.2" stroke-linejoin="round"/>
+    <path d="M1,1 L11,6 L1,11 Z" fill="#000000" stroke="#000000" stroke-width="1.2" stroke-linejoin="round"/>
   </marker>
   <marker id="arr-thin" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M2,2 L10,6 L2,10" fill="none" stroke="#1f2933" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2,2 L10,6 L2,10" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
   </marker>
   <marker id="arr-dep" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M1,1 L11,6 L1,11" fill="#ffffff" stroke="#1f2933" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M1,1 L11,6 L1,11" fill="#ffffff" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"/>
   </marker>
 </defs>
-<g><text x="505" y="14" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">ASI-1a. Diagrama de actividad</text>
-<text x="505" y="36" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">UML — Situación actual del</text>
-<text x="505" y="58" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">parqueo</text></g>
-<g><text x="505" y="47" font-size="11.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">3.1.2 · Flujo AS-IS del</text>
-<text x="505" y="61" font-size="11.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">parqueo EMI UALP</text></g>
-<rect x="50" y="130" width="210" height="900" fill="#ffffff" stroke="#1f2933" stroke-width="1.2"/>
-<g><text x="155" y="152" font-size="10.5" fill="#0c3f73" font-weight="700" text-anchor="middle" xml:space="preserve">Conductor / Vehículo</text></g>
-<line x1="50" y1="130" x2="50" y2="1030" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<rect x="260" y="130" width="230" height="900" fill="#ffffff" stroke="#1f2933" stroke-width="1.2"/>
-<g><text x="375" y="152" font-size="10.5" fill="#0c3f73" font-weight="700" text-anchor="middle" xml:space="preserve">Guardia de portería</text></g>
-<line x1="260" y1="130" x2="260" y2="1030" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<rect x="490" y="130" width="250" height="900" fill="#ffffff" stroke="#1f2933" stroke-width="1.2"/>
-<g><text x="615" y="145" font-size="10.5" fill="#0c3f73" font-weight="700" text-anchor="middle" xml:space="preserve">Registro manual (planilla /</text>
-<text x="615" y="158" font-size="10.5" fill="#0c3f73" font-weight="700" text-anchor="middle" xml:space="preserve">Excel)</text></g>
-<line x1="490" y1="130" x2="490" y2="1030" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<rect x="740" y="130" width="220" height="900" fill="#ffffff" stroke="#1f2933" stroke-width="1.2"/>
-<g><text x="850" y="152" font-size="10.5" fill="#0c3f73" font-weight="700" text-anchor="middle" xml:space="preserve">Jefatura de seguridad</text></g>
-<line x1="740" y1="130" x2="740" y2="1030" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<line x1="960" y1="130" x2="960" y2="1030" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<line x1="155" y1="206" x2="155" y2="234" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="212.2" y1="286" x2="317.8" y2="334" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="375" y1="386" x2="375" y2="434" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="375" y1="486" x2="375" y2="525" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="336.0416666666667" y1="635" x2="308.4166666666667" y2="674" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="394.4791666666667" y1="635" x2="450.7916666666667" y2="794" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="380" y1="700" x2="525" y2="700" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="615" y1="726" x2="615" y2="794" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="510.375" y1="846" x2="564.625" y2="874" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="615" y1="926" x2="615" y2="974" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="850" y1="726" x2="850" y2="764" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="850" y1="816" x2="850" y2="854" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<line x1="850" y1="906" x2="850" y2="954" stroke="#1f2933" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<g><rect x="280.23" y="630.94" width="19.55" height="18.13" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="290" y="644" font-size="10.5" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">sí</text></g></g>
-<g><rect x="490.23" y="700.94" width="19.55" height="18.13" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="500" y="714" font-size="10.5" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">no</text></g></g>
-<circle cx="155" cy="180" r="11" fill="#1f2933" stroke="#1f2933" stroke-width="1.4"/>
-<rect x="65" y="234" width="180" height="52" fill="#eef4fb" stroke="#1f2933" stroke-width="1.3" rx="9" ry="9"/><g><text x="155" y="264" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">Llegar al acceso vehicular</text></g>
-<rect x="285" y="334" width="180" height="52" fill="#eef4fb" stroke="#1f2933" stroke-width="1.3" rx="9" ry="9"/><g><text x="375" y="357" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">Solicitar identificación al</text>
-<text x="375" y="370" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">conductor</text></g>
-<rect x="285" y="434" width="180" height="52" fill="#eef4fb" stroke="#1f2933" stroke-width="1.3" rx="9" ry="9"/><g><text x="375" y="457" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">Consultar la lista impresa de</text>
-<text x="375" y="470" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">autorizados</text></g>
-<path d="M375,525 L475,580 L375,635 L275,580 Z" fill="#fdf6e3" stroke="#1f2933" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><g><text x="375" y="583" font-size="9.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">¿Figura en la lista?</text></g>
-<rect x="200" y="674" width="180" height="52" fill="#eef4fb" stroke="#1f2933" stroke-width="1.3" rx="9" ry="9"/><g><text x="290" y="704" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">Levantar la barrera manualmente</text></g>
-<rect x="370" y="794" width="180" height="52" fill="#eef4fb" stroke="#1f2933" stroke-width="1.3" rx="9" ry="9"/><g><text x="460" y="824" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">Negar el ingreso</text></g>
-<rect x="525" y="674" width="180" height="52" fill="#eef4fb" stroke="#1f2933" stroke-width="1.3" rx="9" ry="9"/><g><text x="615" y="697" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">Anotar el movimiento en la</text>
-<text x="615" y="710" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">planilla</text></g>
-<circle cx="615" cy="820" r="11" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/><circle cx="615" cy="820" r="4.95" fill="#1f2933" stroke="#1f2933" stroke-width="1.2"/>
-<rect x="525" y="874" width="180" height="52" fill="#eef4fb" stroke="#1f2933" stroke-width="1.3" rx="9" ry="9"/><g><text x="615" y="897" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">Registrar la novedad en la</text>
-<text x="615" y="910" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">planilla</text></g>
-<circle cx="615" cy="1000" r="11" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/><circle cx="615" cy="1000" r="4.95" fill="#1f2933" stroke="#1f2933" stroke-width="1.2"/>
-<circle cx="850" cy="700" r="11" fill="#1f2933" stroke="#1f2933" stroke-width="1.4"/>
-<rect x="760" y="764" width="180" height="52" fill="#eef4fb" stroke="#1f2933" stroke-width="1.3" rx="9" ry="9"/><g><text x="850" y="787" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">Consolidar el reporte mensual</text>
-<text x="850" y="800" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">en Excel</text></g>
-<rect x="760" y="854" width="180" height="52" fill="#eef4fb" stroke="#1f2933" stroke-width="1.3" rx="9" ry="9"/><g><text x="850" y="877" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">Presentar el reporte a la</text>
-<text x="850" y="890" font-size="10.5" fill="#1f2933" font-weight="400" text-anchor="middle" xml:space="preserve">jefatura</text></g>
-<circle cx="850" cy="980" r="11" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/><circle cx="850" cy="980" r="4.95" fill="#1f2933" stroke="#1f2933" stroke-width="1.2"/>
-<g><line x1="60" y1="1092" x2="86" y2="1092" stroke="#1f2933" stroke-width="1.3" marker-end="url(#arr-fill)" stroke-linecap="round"/>
-<g><text x="92" y="1096" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">Flujo de control</text></g>
-<line x1="207.6" y1="1092" x2="233.6" y2="1092" stroke="#1f2933" stroke-width="1.3" stroke-linecap="round"/>
-<g><text x="239.6" y="1064" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">El control depende de lista</text>
-<text x="239.6" y="1076" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">impresa, planilla y Excel: no</text>
-<text x="239.6" y="1089" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">hay trazabilidad en tiempo</text>
-<text x="239.6" y="1102" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">real, la disponibilidad no se</text>
-<text x="239.6" y="1115" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">conoce y la validación queda</text>
-<text x="239.6" y="1128" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">al criterio del guardia.</text></g></g>
+
+
+<rect x="50" y="130" width="210" height="900" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<g><text x="155" y="152" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">Conductor / Vehículo</text></g>
+<line x1="50" y1="130" x2="50" y2="1030" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="260" y="130" width="230" height="900" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<g><text x="375" y="152" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">Guardia de portería</text></g>
+<line x1="260" y1="130" x2="260" y2="1030" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="490" y="130" width="250" height="900" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<g><text x="615" y="145" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">Registro manual (planilla /</text>
+<text x="615" y="158" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">Excel)</text></g>
+<line x1="490" y1="130" x2="490" y2="1030" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="740" y="130" width="220" height="900" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<g><text x="850" y="152" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">Jefatura de seguridad</text></g>
+<line x1="740" y1="130" x2="740" y2="1030" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="960" y1="130" x2="960" y2="1030" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="155" y1="206" x2="155" y2="234" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="212.2" y1="286" x2="317.8" y2="334" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="375" y1="386" x2="375" y2="434" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="375" y1="486" x2="375" y2="525" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="336.0416666666667" y1="635" x2="308.4166666666667" y2="674" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="394.4791666666667" y1="635" x2="450.7916666666667" y2="794" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="380" y1="700" x2="525" y2="700" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="615" y1="726" x2="615" y2="794" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="510.375" y1="846" x2="564.625" y2="874" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="615" y1="926" x2="615" y2="974" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="850" y1="726" x2="850" y2="764" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="850" y1="816" x2="850" y2="854" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<line x1="850" y1="906" x2="850" y2="954" stroke="#000000" stroke-width="1.2" marker-end="url(#arr-fill)" stroke-linecap="round"/>
+<g><rect x="280.23" y="630.94" width="19.55" height="18.13" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="290" y="644" font-size="10.5" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">sí</text></g></g>
+<g><rect x="490.23" y="700.94" width="19.55" height="18.13" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="500" y="714" font-size="10.5" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">no</text></g></g>
+<circle cx="155" cy="180" r="11" fill="#000000" stroke="#000000" stroke-width="1.4"/>
+<rect x="65" y="234" width="180" height="52" fill="#EAF2FB" stroke="#000000" stroke-width="1.3" rx="9" ry="9"/><g><text x="155" y="264" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">Llegar al acceso vehicular</text></g>
+<rect x="285" y="334" width="180" height="52" fill="#EAF2FB" stroke="#000000" stroke-width="1.3" rx="9" ry="9"/><g><text x="375" y="357" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">Solicitar identificación al</text>
+<text x="375" y="370" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">conductor</text></g>
+<rect x="285" y="434" width="180" height="52" fill="#EAF2FB" stroke="#000000" stroke-width="1.3" rx="9" ry="9"/><g><text x="375" y="457" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">Consultar la lista impresa de</text>
+<text x="375" y="470" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">autorizados</text></g>
+<path d="M375,525 L475,580 L375,635 L275,580 Z" fill="#FFFFCC" stroke="#000000" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><g><text x="375" y="583" font-size="9.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">¿Figura en la lista?</text></g>
+<rect x="200" y="674" width="180" height="52" fill="#EAF2FB" stroke="#000000" stroke-width="1.3" rx="9" ry="9"/><g><text x="290" y="704" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">Levantar la barrera manualmente</text></g>
+<rect x="370" y="794" width="180" height="52" fill="#EAF2FB" stroke="#000000" stroke-width="1.3" rx="9" ry="9"/><g><text x="460" y="824" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">Negar el ingreso</text></g>
+<rect x="525" y="674" width="180" height="52" fill="#EAF2FB" stroke="#000000" stroke-width="1.3" rx="9" ry="9"/><g><text x="615" y="697" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">Anotar el movimiento en la</text>
+<text x="615" y="710" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">planilla</text></g>
+<circle cx="615" cy="820" r="11" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><circle cx="615" cy="820" r="4.95" fill="#000000" stroke="#000000" stroke-width="1.2"/>
+<rect x="525" y="874" width="180" height="52" fill="#EAF2FB" stroke="#000000" stroke-width="1.3" rx="9" ry="9"/><g><text x="615" y="897" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">Registrar la novedad en la</text>
+<text x="615" y="910" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">planilla</text></g>
+<circle cx="615" cy="1000" r="11" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><circle cx="615" cy="1000" r="4.95" fill="#000000" stroke="#000000" stroke-width="1.2"/>
+<circle cx="850" cy="700" r="11" fill="#000000" stroke="#000000" stroke-width="1.4"/>
+<rect x="760" y="764" width="180" height="52" fill="#EAF2FB" stroke="#000000" stroke-width="1.3" rx="9" ry="9"/><g><text x="850" y="787" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">Consolidar el reporte mensual</text>
+<text x="850" y="800" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">en Excel</text></g>
+<rect x="760" y="854" width="180" height="52" fill="#EAF2FB" stroke="#000000" stroke-width="1.3" rx="9" ry="9"/><g><text x="850" y="877" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">Presentar el reporte a la</text>
+<text x="850" y="890" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle" xml:space="preserve">jefatura</text></g>
+<circle cx="850" cy="980" r="11" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><circle cx="850" cy="980" r="4.95" fill="#000000" stroke="#000000" stroke-width="1.2"/>
+
 </svg>

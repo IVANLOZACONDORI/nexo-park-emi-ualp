@@ -21,5 +21,14 @@ Documentos de las secciones asignadas en el Capítulo III. Cada uno va en
 
 ## Diagramas
 
-Las figuras insertadas corresponden a `docs/diagramas_v36/`. Los documentos se
-pueden regenerar desde `docs/diagramas_v36/` si se actualizan los SVG/PNG.
+Las figuras insertadas corresponden a `docs/diagramas_v36/` y usan la estética
+de Enterprise Architect. Los documentos se pueden regenerar desde
+`docs/diagramas_v36/` si se actualizan los SVG/PNG.
+
+## Evidencias de pruebas
+
+La corrida local del 17/11/2026 está en `docs/evidencias_v36/`:
+11/11 pruebas de integración, 7/7 de perfil V36, 4/4 de CAPTCHA y verificación
+de estructura aprobada. El detalle del entorno está en el `LEEME.md` de esa
+carpeta.
+

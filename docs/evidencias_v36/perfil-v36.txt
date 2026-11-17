@@ -1,0 +1,7 @@
+PASS Perfil protegido sin sesión
+PASS Alta mínima y plazo de 3 días persistente
+PASS Validación de datos y rechazo de foto no admitida
+PASS Perfil completo sin elevar permisos ni modificar otra cuenta
+PASS Fotografía procesada y persistente después de cerrar sesión
+PASS Eliminar fotografía
+PASS Propietario accede a su perfil sin opción de CV y conserva aislamiento

@@ -58,3 +58,15 @@ entrega anterior y se conservan porque los documentos de M06 los citan.
 - Numeración: **M03** propietarios, **M06** control.
 - Requisitos: RF-05 a RF-07 y RNF-04/05 (M03); RF-14 a RF-19, RF-37,
   RF-40 a RF-42 y RF-46 (M06).
+
+## Estética Enterprise Architect
+
+Las figuras de los diagramas UML usan el tema visual de Enterprise Architect:
+Calibri, fondo blanco, casos de uso en amarillo pálido, acciones en azul claro,
+decisiones y estados en amarillo, conectores negros finos y sin títulos ni
+leyendas dentro del lienzo. Los mockups conservan su estilo de interfaz porque
+no son diagramas UML.
+
+El modelo `.qea` sigue disponible en `docs/ea/` para quien necesite abrirlo en
+Enterprise Architect.
+

@@ -1,120 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="640" viewBox="0 0 1140 640" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="640" viewBox="0 0 1140 640" font-family="Calibri,Arial,sans-serif">
 <title>ADV-6. Modelo de interfaz abstracta — Control de ingreso y salida</title>
 <defs>
   <marker id="arr-open" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M1,1 L11,6 L1,11" fill="none" stroke="#1f2933" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1,1 L11,6 L1,11" fill="none" stroke="#000000" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
   </marker>
   <marker id="arr-fill" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M1,1 L11,6 L1,11 Z" fill="#1f2933" stroke="#1f2933" stroke-width="1.2" stroke-linejoin="round"/>
+    <path d="M1,1 L11,6 L1,11 Z" fill="#000000" stroke="#000000" stroke-width="1.2" stroke-linejoin="round"/>
   </marker>
   <marker id="arr-thin" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M2,2 L10,6 L2,10" fill="none" stroke="#1f2933" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2,2 L10,6 L2,10" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
   </marker>
   <marker id="arr-dep" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-    <path d="M1,1 L11,6 L1,11" fill="#ffffff" stroke="#1f2933" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M1,1 L11,6 L1,11" fill="#ffffff" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"/>
   </marker>
 </defs>
-<g><text x="570" y="14" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">ADV-6. Modelo de interfaz</text>
-<text x="570" y="36" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">abstracta — Control de ingreso</text>
-<text x="570" y="58" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">y salida</text></g>
-<g><text x="570" y="39" font-size="11.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">M06 · Panel operativo,</text>
-<text x="570" y="54" font-size="11.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">revisión manual, historial y</text>
-<text x="570" y="69" font-size="11.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">consulta propia</text></g>
-<line x1="NaN" y1="NaN" x2="570" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="NaN" y="NaN" width="42.65" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="NaN" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">captura</text></g></g>
-<line x1="NaN" y1="NaN" x2="940" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="NaN" y="NaN" width="47.6" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="NaN" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">registra</text></g></g>
-<line x1="200" y1="NaN" x2="200" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="168.78" y="NaN" width="62.45" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="200" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">propietario</text></g></g>
-<line x1="940" y1="NaN" x2="940" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="921.15" y="NaN" width="37.7" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="940" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">revisa</text></g></g>
-<line x1="NaN" y1="NaN" x2="570" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="NaN" y="NaN" width="47.6" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="NaN" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">consulta</text></g></g>
-<line x1="NaN" y1="NaN" x2="940" y2="NaN" stroke="#1f2933" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><rect x="NaN" y="NaN" width="42.65" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="NaN" y="NaN" font-size="9" fill="#37474f" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">detalla</text></g></g>
-<rect x="60" y="120" width="280" height="140" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="60" y="120" width="280" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="200" y="139" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">PanelControlADV</text></g>
-<line x1="60" y1="150" x2="340" y2="150" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="68" y="167" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">eventos: Evento[]</text></g>
-<g><text x="68" y="180" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">filtros</text></g>
-<g><text x="68" y="193" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">permisoValidar</text></g>
-<line x1="60" y1="199" x2="340" y2="199" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="68" y="214" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">listar()</text></g>
-<g><text x="68" y="227" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">capturar()</text></g>
-<g><text x="68" y="240" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">revisar()</text></g>
-<rect x="420" y="120" width="300" height="179" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="420" y="120" width="300" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="570" y="139" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">LecturaPlacaADV</text></g>
-<line x1="420" y1="150" x2="720" y2="150" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="428" y="167" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">imagen</text></g>
-<g><text x="428" y="180" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">tipoEvento</text></g>
-<g><text x="428" y="193" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">puntoAcceso</text></g>
-<g><text x="428" y="206" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">placa</text></g>
-<g><text x="428" y="219" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">confianza</text></g>
-<g><text x="428" y="232" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">resultado</text></g>
-<line x1="420" y1="238" x2="720" y2="238" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="428" y="253" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">leer()</text></g>
-<g><text x="428" y="266" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">validarImagen()</text></g>
-<g><text x="428" y="279" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">registrar()</text></g>
-<rect x="800" y="120" width="280" height="179" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="800" y="120" width="280" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="940" y="139" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">EventoAccesoADV</text></g>
-<line x1="800" y1="150" x2="1080" y2="150" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="808" y="167" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">id</text></g>
-<g><text x="808" y="180" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">fecha</text></g>
-<g><text x="808" y="193" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">placa</text></g>
-<g><text x="808" y="206" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">resultado</text></g>
-<g><text x="808" y="219" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">origen</text></g>
-<g><text x="808" y="232" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">evidencia</text></g>
-<g><text x="808" y="245" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">revisor</text></g>
-<line x1="800" y1="251" x2="1080" y2="251" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="808" y="266" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">detalle()</text></g>
-<g><text x="808" y="279" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">reconstruir()</text></g>
-<rect x="60" y="430" width="280" height="127" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="60" y="430" width="280" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="200" y="449" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">ConsultaPropiaADV</text></g>
-<line x1="60" y1="460" x2="340" y2="460" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="68" y="477" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">placa</text></g>
-<g><text x="68" y="490" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">movimiento</text></g>
-<g><text x="68" y="503" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">resultado</text></g>
-<g><text x="68" y="516" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">punto</text></g>
-<line x1="60" y1="522" x2="340" y2="522" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="68" y="537" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">listar()</text></g>
-<rect x="420" y="430" width="300" height="166" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="420" y="430" width="300" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="570" y="449" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">HistorialADV</text></g>
-<line x1="420" y1="460" x2="720" y2="460" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="428" y="477" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">placa</text></g>
-<g><text x="428" y="490" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">tipo</text></g>
-<g><text x="428" y="503" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">estado</text></g>
-<g><text x="428" y="516" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">desde</text></g>
-<g><text x="428" y="529" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">hasta</text></g>
-<g><text x="428" y="542" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">pagina</text></g>
-<line x1="420" y1="548" x2="720" y2="548" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="428" y="563" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">filtrar()</text></g>
-<g><text x="428" y="576" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">paginar()</text></g>
-<rect x="800" y="430" width="280" height="140" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
-<rect x="800" y="430" width="280" height="30" fill="#e7eef8" stroke="#1f2933" stroke-width="1.5"/>
-<g><text x="940" y="449" font-size="10.5" fill="#1f2933" font-weight="700" text-anchor="middle" xml:space="preserve">RevisionManualADV</text></g>
-<line x1="800" y1="460" x2="1080" y2="460" stroke="#1f2933" stroke-width="1.2" stroke-linecap="round"/>
-<g><text x="808" y="477" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">eventoId</text></g>
-<g><text x="808" y="490" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">placaCorregida</text></g>
-<g><text x="808" y="503" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">motivo</text></g>
-<g><text x="808" y="516" font-size="9" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">autorizadoPor</text></g>
-<line x1="800" y1="522" x2="1080" y2="522" stroke="#1f2933" stroke-width="1.1" stroke-linecap="round"/>
-<g><text x="808" y="537" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">validar()</text></g>
-<g><text x="808" y="550" font-size="9" fill="#0c3f73" font-weight="400" text-anchor="start" xml:space="preserve">registrar()</text></g>
-<g><line x1="50" y1="588" x2="76" y2="588" stroke="#1f2933" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
-<g><text x="82" y="585" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">Relación de observación /</text>
-<text x="82" y="598" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">actualización</text></g>
-<line x1="326.4" y1="588" x2="352.4" y2="588" stroke="#1f2933" stroke-width="1.3" stroke-linecap="round"/>
-<g><text x="358.4" y="585" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">ADV: atributos (arriba) y</text>
-<text x="358.4" y="598" font-size="10" fill="#37474f" font-weight="400" text-anchor="start" xml:space="preserve">acciones (abajo)</text></g></g>
-<g><text x="570" y="601" font-size="9.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">La revisión manual solo aplica</text>
-<text x="570" y="613" font-size="9.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">a eventos INCIERTO o DENEGADO</text>
-<text x="570" y="625" font-size="9.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">y exige placa y motivo; la</text>
-<text x="570" y="637" font-size="9.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">consulta propia es de solo</text>
-<text x="570" y="650" font-size="9.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">lectura.</text></g>
+
+
+<line x1="340" y1="197.3783783783784" x2="420" y2="201.59459459459458" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="358.68" y="182.36" width="42.65" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="380" y="194" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">captura</text></g></g>
+<line x1="720" y1="209.5" x2="800" y2="209.5" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="736.2" y="192.38" width="47.6" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="760" y="204" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">registra</text></g></g>
+<line x1="200" y1="260" x2="200" y2="430" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="168.78" y="327.88" width="62.45" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="200" y="339" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">propietario</text></g></g>
+<line x1="940" y1="299" x2="940" y2="430" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="921.15" y="347.38" width="37.7" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="940" y="359" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">revisa</text></g></g>
+<line x1="830.8896210873147" y1="299" x2="671.1861614497528" y2="430" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="727.24" y="347.38" width="47.6" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="751.0378912685337" y="359" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">consulta</text></g></g>
+<line x1="671.1861614497528" y1="430" x2="830.8896210873147" y2="299" stroke="#000000" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-open)" stroke-linecap="round"/>
+<g><rect x="729.71" y="347.38" width="42.65" height="16.25" fill="#ffffff" stroke="none" stroke-width="1.4"/><g><text x="751.0378912685337" y="359" font-size="9" fill="#333333" font-weight="500" text-anchor="middle" font-style="italic" xml:space="preserve">detalla</text></g></g>
+<rect x="60" y="120" width="280" height="140" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="60" y="120" width="280" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="200" y="139" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">PanelControlADV</text></g>
+<line x1="60" y1="150" x2="340" y2="150" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="68" y="167" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">eventos: Evento[]</text></g>
+<g><text x="68" y="180" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">filtros</text></g>
+<g><text x="68" y="193" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">permisoValidar</text></g>
+<line x1="60" y1="199" x2="340" y2="199" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="68" y="214" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">listar()</text></g>
+<g><text x="68" y="227" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">capturar()</text></g>
+<g><text x="68" y="240" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">revisar()</text></g>
+<rect x="420" y="120" width="300" height="179" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="420" y="120" width="300" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="570" y="139" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">LecturaPlacaADV</text></g>
+<line x1="420" y1="150" x2="720" y2="150" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="428" y="167" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">imagen</text></g>
+<g><text x="428" y="180" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">tipoEvento</text></g>
+<g><text x="428" y="193" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">puntoAcceso</text></g>
+<g><text x="428" y="206" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">placa</text></g>
+<g><text x="428" y="219" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">confianza</text></g>
+<g><text x="428" y="232" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">resultado</text></g>
+<line x1="420" y1="238" x2="720" y2="238" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="428" y="253" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">leer()</text></g>
+<g><text x="428" y="266" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">validarImagen()</text></g>
+<g><text x="428" y="279" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">registrar()</text></g>
+<rect x="800" y="120" width="280" height="179" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="800" y="120" width="280" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="940" y="139" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">EventoAccesoADV</text></g>
+<line x1="800" y1="150" x2="1080" y2="150" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="808" y="167" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">id</text></g>
+<g><text x="808" y="180" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">fecha</text></g>
+<g><text x="808" y="193" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">placa</text></g>
+<g><text x="808" y="206" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">resultado</text></g>
+<g><text x="808" y="219" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">origen</text></g>
+<g><text x="808" y="232" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">evidencia</text></g>
+<g><text x="808" y="245" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">revisor</text></g>
+<line x1="800" y1="251" x2="1080" y2="251" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="808" y="266" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">detalle()</text></g>
+<g><text x="808" y="279" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">reconstruir()</text></g>
+<rect x="60" y="430" width="280" height="127" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="60" y="430" width="280" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="200" y="449" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">ConsultaPropiaADV</text></g>
+<line x1="60" y1="460" x2="340" y2="460" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="68" y="477" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">placa</text></g>
+<g><text x="68" y="490" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">movimiento</text></g>
+<g><text x="68" y="503" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">resultado</text></g>
+<g><text x="68" y="516" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">punto</text></g>
+<line x1="60" y1="522" x2="340" y2="522" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="68" y="537" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">listar()</text></g>
+<rect x="420" y="430" width="300" height="166" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="420" y="430" width="300" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="570" y="449" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">HistorialADV</text></g>
+<line x1="420" y1="460" x2="720" y2="460" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="428" y="477" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">placa</text></g>
+<g><text x="428" y="490" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">tipo</text></g>
+<g><text x="428" y="503" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">estado</text></g>
+<g><text x="428" y="516" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">desde</text></g>
+<g><text x="428" y="529" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">hasta</text></g>
+<g><text x="428" y="542" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">pagina</text></g>
+<line x1="420" y1="548" x2="720" y2="548" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="428" y="563" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">filtrar()</text></g>
+<g><text x="428" y="576" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">paginar()</text></g>
+<rect x="800" y="430" width="280" height="140" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<rect x="800" y="430" width="280" height="30" fill="#F2F2F2" stroke="#000000" stroke-width="1.5"/>
+<g><text x="940" y="449" font-size="10.5" fill="#000000" font-weight="700" text-anchor="middle" xml:space="preserve">RevisionManualADV</text></g>
+<line x1="800" y1="460" x2="1080" y2="460" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/>
+<g><text x="808" y="477" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">eventoId</text></g>
+<g><text x="808" y="490" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">placaCorregida</text></g>
+<g><text x="808" y="503" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">motivo</text></g>
+<g><text x="808" y="516" font-size="9" fill="#333333" font-weight="400" text-anchor="start" xml:space="preserve">autorizadoPor</text></g>
+<line x1="800" y1="522" x2="1080" y2="522" stroke="#000000" stroke-width="1.1" stroke-linecap="round"/>
+<g><text x="808" y="537" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">validar()</text></g>
+<g><text x="808" y="550" font-size="9" fill="#000000" font-weight="400" text-anchor="start" xml:space="preserve">registrar()</text></g>
+
+<g><text x="570" y="601" font-size="9.5" fill="#333333" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">La revisión manual solo aplica</text>
+<text x="570" y="613" font-size="9.5" fill="#333333" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">a eventos INCIERTO o DENEGADO</text>
+<text x="570" y="625" font-size="9.5" fill="#333333" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">y exige placa y motivo; la</text>
+<text x="570" y="637" font-size="9.5" fill="#333333" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">consulta propia es de solo</text>
+<text x="570" y="650" font-size="9.5" fill="#333333" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">lectura.</text></g>
 </svg>
