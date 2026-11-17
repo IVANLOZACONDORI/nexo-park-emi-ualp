@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+<title>MOCK-6 Control de ingreso y salida</title>
+<defs>
+  <marker id="arr-open" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+    <path d="M1,1 L11,6 L1,11" fill="none" stroke="#1f2933" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arr-fill" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+    <path d="M1,1 L11,6 L1,11 Z" fill="#1f2933" stroke="#1f2933" stroke-width="1.2" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arr-thin" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+    <path d="M2,2 L10,6 L2,10" fill="none" stroke="#1f2933" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arr-dep" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+    <path d="M1,1 L11,6 L1,11" fill="#ffffff" stroke="#1f2933" stroke-width="1.5" stroke-linejoin="round"/>
+  </marker>
+</defs>
+<g><text x="600" y="14" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">MOCK-6. Mockup — Control de</text>
+<text x="600" y="36" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">ingreso y salida (escritorio y</text>
+<text x="600" y="58" font-size="17" fill="#0b2545" font-weight="700" text-anchor="middle" xml:space="preserve">móvil)</text></g>
+<g><text x="600" y="39" font-size="11.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">M06 · Captura OCR, eventos</text>
+<text x="600" y="54" font-size="11.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">registrados e historial propio</text>
+<text x="600" y="69" font-size="11.5" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">del propietario</text></g>
+<rect x="20" y="70" width="820" height="760" fill="#ffffff" stroke="#1f2933" stroke-width="1.6" rx="10"/>
+<rect x="20" y="70" width="820" height="34" fill="#e9eef5" stroke="#1f2933" stroke-width="1.6" rx="10"/>
+<rect x="20" y="94" width="820" height="10" fill="#e9eef5" stroke="#1f2933" stroke-width="0"/>
+<circle cx="38" cy="87" r="4.5" fill="#e06c60" stroke="none" stroke-width="0"/>
+<circle cx="54" cy="87" r="4.5" fill="#e6b34a" stroke="none" stroke-width="0"/>
+<circle cx="70" cy="87" r="4.5" fill="#7fb77e" stroke="none" stroke-width="0"/>
+<rect x="94" y="78" width="670" height="18" fill="#ffffff" stroke="#1f2933" stroke-width="1" rx="9"/>
+<g><text x="104" y="90" font-size="8.5" fill="#5b6b7a" font-weight="400" text-anchor="start" xml:space="preserve">nexo-park.emi.edu.bo/control</text></g>
+<rect x="20" y="104" width="180" height="726" fill="#101f35" stroke="#1f2933" stroke-width="0"/>
+<rect x="20" y="104" width="180" height="54" fill="#18344f" stroke="#1f2933" stroke-width="0"/>
+<g><text x="36" y="136" font-size="13" fill="#ffffff" font-weight="700" text-anchor="start" xml:space="preserve">NEXO PARK</text></g>
+<g><text x="36" y="149" font-size="7.5" fill="#9fb3c8" font-weight="400" text-anchor="start" xml:space="preserve">EMI · UALP</text></g>
+<circle cx="42" cy="178" r="3" fill="#7f93a8" stroke="none" stroke-width="0"/>
+<g><text x="52" y="181" font-size="8.6" fill="#c3d0dc" font-weight="400" text-anchor="start" xml:space="preserve">Panel</text></g>
+<rect x="28" y="194" width="164" height="24" fill="#087f79" stroke="#1f2933" stroke-width="0" rx="7"/>
+<circle cx="42" cy="205" r="3" fill="#ffffff" stroke="none" stroke-width="0"/>
+<g><text x="52" y="208" font-size="8.6" fill="#ffffff" font-weight="400" text-anchor="start" xml:space="preserve">Control de ingreso</text></g>
+<circle cx="42" cy="232" r="3" fill="#7f93a8" stroke="none" stroke-width="0"/>
+<g><text x="52" y="235" font-size="8.6" fill="#c3d0dc" font-weight="400" text-anchor="start" xml:space="preserve">Historial</text></g>
+<circle cx="42" cy="259" r="3" fill="#7f93a8" stroke="none" stroke-width="0"/>
+<g><text x="52" y="262" font-size="8.6" fill="#c3d0dc" font-weight="400" text-anchor="start" xml:space="preserve">Propietarios</text></g>
+<circle cx="42" cy="286" r="3" fill="#7f93a8" stroke="none" stroke-width="0"/>
+<g><text x="52" y="289" font-size="8.6" fill="#c3d0dc" font-weight="400" text-anchor="start" xml:space="preserve">Vehículos</text></g>
+<circle cx="42" cy="313" r="3" fill="#7f93a8" stroke="none" stroke-width="0"/>
+<g><text x="52" y="316" font-size="8.6" fill="#c3d0dc" font-weight="400" text-anchor="start" xml:space="preserve">Reportes</text></g>
+<circle cx="42" cy="340" r="3" fill="#7f93a8" stroke="none" stroke-width="0"/>
+<g><text x="52" y="343" font-size="8.6" fill="#c3d0dc" font-weight="400" text-anchor="start" xml:space="preserve">Alertas</text></g>
+<circle cx="42" cy="367" r="3" fill="#7f93a8" stroke="none" stroke-width="0"/>
+<g><text x="52" y="370" font-size="8.6" fill="#c3d0dc" font-weight="400" text-anchor="start" xml:space="preserve">Auditoría</text></g>
+<g><text x="230" y="141" font-size="15" fill="#101f35" font-weight="700" text-anchor="start" xml:space="preserve">Control de ingreso y salida</text>
+<text x="230" y="160" font-size="15" fill="#101f35" font-weight="700" text-anchor="start" xml:space="preserve">por placa</text></g>
+<g><text x="230" y="159" font-size="8.5" fill="#607288" font-weight="400" text-anchor="start" xml:space="preserve">Lectura OCR y verificación de</text>
+<text x="230" y="169" font-size="8.5" fill="#607288" font-weight="400" text-anchor="start" xml:space="preserve">autorizaciones.</text></g>
+<rect x="230" y="185" width="570" height="230" fill="#ffffff" stroke="#dce5ec" stroke-width="1.2" rx="10"/>
+<g><text x="244" y="209" font-size="10.5" fill="#18344f" font-weight="700" text-anchor="start" xml:space="preserve">Capturar evidencia</text></g>
+<g><text x="245" y="223" font-size="8" fill="#607288" font-weight="400" text-anchor="start" xml:space="preserve">Movimiento</text></g>
+<rect x="245" y="225" width="150" height="26" fill="#ffffff" stroke="#c9d5e0" stroke-width="1" rx="5"/>
+<g><text x="253" y="241" font-size="8.5" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">INGRESO</text></g>
+<g><text x="410" y="223" font-size="8" fill="#607288" font-weight="400" text-anchor="start" xml:space="preserve">Punto de acceso</text></g>
+<rect x="410" y="225" width="150" height="26" fill="#ffffff" stroke="#c9d5e0" stroke-width="1" rx="5"/>
+<g><text x="418" y="241" font-size="8.5" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">PORTERIA</text></g>
+<g><text x="245" y="283" font-size="8" fill="#607288" font-weight="400" text-anchor="start" xml:space="preserve">Imagen real de la placa</text></g>
+<rect x="245" y="285" width="320" height="26" fill="#ffffff" stroke="#c9d5e0" stroke-width="1" rx="5"/>
+<g><text x="253" y="301" font-size="8.5" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">placa_abc123.jpg</text></g>
+<rect x="245" y="340" width="170" height="26" fill="#087f79" stroke="#c9d5e0" stroke-width="0" rx="7"/>
+<g><text x="330" y="356" font-size="8.5" fill="#ffffff" font-weight="700" text-anchor="middle" xml:space="preserve">Reconocer y registrar</text></g>
+<g><text x="430" y="345" font-size="8.6" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">Resultado: AUTORIZADO · 96%</text>
+<text x="430" y="361" font-size="8.6" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">Requiere revisión: no</text></g>
+<rect x="230" y="435" width="570" height="310" fill="#ffffff" stroke="#dce5ec" stroke-width="1.2" rx="10"/>
+<g><text x="244" y="459" font-size="10.5" fill="#18344f" font-weight="700" text-anchor="start" xml:space="preserve">Eventos registrados</text></g>
+<rect x="244" y="475" width="542" height="24" fill="#eef2f6" stroke="#dce5ec" stroke-width="1"/>
+<g><text x="252" y="490" font-size="7.8" fill="#37474f" font-weight="700" text-anchor="start" xml:space="preserve">Fecha</text></g>
+<g><text x="363.1794871794872" y="490" font-size="7.8" fill="#37474f" font-weight="700" text-anchor="start" xml:space="preserve">Mov.</text></g>
+<g><text x="428.03418803418805" y="490" font-size="7.8" fill="#37474f" font-weight="700" text-anchor="start" xml:space="preserve">Placa</text></g>
+<g><text x="502.1538461538462" y="490" font-size="7.8" fill="#37474f" font-weight="700" text-anchor="start" xml:space="preserve">Conf.</text></g>
+<g><text x="557.7435897435898" y="490" font-size="7.8" fill="#37474f" font-weight="700" text-anchor="start" xml:space="preserve">Resultado</text></g>
+<g><text x="645.7606837606838" y="490" font-size="7.8" fill="#37474f" font-weight="700" text-anchor="start" xml:space="preserve">Evidencia</text></g>
+<g><text x="729.1452991452992" y="490" font-size="7.8" fill="#37474f" font-weight="700" text-anchor="start" xml:space="preserve">Revisión</text></g>
+<rect x="244" y="499" width="542" height="27" fill="#ffffff" stroke="#e6edf3" stroke-width="0.8"/>
+<g><text x="252" y="515" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">12/10 08:12</text></g>
+<g><text x="363.1794871794872" y="515" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">INGRESO</text></g>
+<g><text x="428.03418803418805" y="515" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">ABC123</text></g>
+<g><text x="502.1538461538462" y="515" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">96%</text></g>
+<rect x="555.74" y="504.5" width="60" height="16" fill="#dcfce7" stroke="#1f2933" stroke-width="0" rx="8"/><g><text x="585.7435897435898" y="515" font-size="7.4" fill="#166534" font-weight="700" text-anchor="middle" xml:space="preserve">AUTORIZADO</text></g>
+<g><text x="645.7606837606838" y="515" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">Fotografía</text></g>
+<g><text x="729.1452991452992" y="515" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">-</text></g>
+<rect x="244" y="526" width="542" height="27" fill="#ffffff" stroke="#e6edf3" stroke-width="0.8"/>
+<g><text x="252" y="542" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">12/10 08:40</text></g>
+<g><text x="363.1794871794872" y="542" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">SALIDA</text></g>
+<g><text x="428.03418803418805" y="542" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">XYZ789</text></g>
+<g><text x="502.1538461538462" y="542" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">93%</text></g>
+<rect x="555.74" y="531.5" width="60" height="16" fill="#dcfce7" stroke="#1f2933" stroke-width="0" rx="8"/><g><text x="585.7435897435898" y="542" font-size="7.4" fill="#166534" font-weight="700" text-anchor="middle" xml:space="preserve">AUTORIZADO</text></g>
+<g><text x="645.7606837606838" y="542" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">Fotografía</text></g>
+<g><text x="729.1452991452992" y="542" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">-</text></g>
+<rect x="244" y="553" width="542" height="27" fill="#ffffff" stroke="#e6edf3" stroke-width="0.8"/>
+<g><text x="252" y="569" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">12/10 09:05</text></g>
+<g><text x="363.1794871794872" y="569" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">INGRESO</text></g>
+<g><text x="428.03418803418805" y="569" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">QWE456</text></g>
+<g><text x="502.1538461538462" y="569" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">71%</text></g>
+<rect x="555.74" y="558.5" width="50.8" height="16" fill="#fee2e2" stroke="#1f2933" stroke-width="0" rx="8"/><g><text x="581.1435897435898" y="569" font-size="7.4" fill="#991b1b" font-weight="700" text-anchor="middle" xml:space="preserve">INCIERTO</text></g>
+<g><text x="645.7606837606838" y="569" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">Fotografía</text></g>
+<rect x="727.15" y="558.5" width="46.2" height="16" fill="#e0f2fe" stroke="#1f2933" stroke-width="0" rx="8"/><g><text x="750.2452991452992" y="569" font-size="7.4" fill="#075985" font-weight="700" text-anchor="middle" xml:space="preserve">Revisar</text></g>
+<rect x="244" y="580" width="542" height="27" fill="#ffffff" stroke="#e6edf3" stroke-width="0.8"/>
+<g><text x="252" y="596" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">12/10 09:20</text></g>
+<g><text x="363.1794871794872" y="596" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">INGRESO</text></g>
+<g><text x="428.03418803418805" y="596" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">QWE456</text></g>
+<g><text x="502.1538461538462" y="596" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">96%</text></g>
+<rect x="555.74" y="585.5" width="41.6" height="16" fill="#e0f2fe" stroke="#1f2933" stroke-width="0" rx="8"/><g><text x="576.5435897435898" y="596" font-size="7.4" fill="#075985" font-weight="700" text-anchor="middle" xml:space="preserve">MANUAL</text></g>
+<g><text x="645.7606837606838" y="596" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">Fotografía</text></g>
+<g><text x="729.1452991452992" y="596" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">-</text></g>
+<rect x="244" y="607" width="542" height="27" fill="#ffffff" stroke="#e6edf3" stroke-width="0.8"/>
+<g><text x="252" y="623" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">12/10 10:02</text></g>
+<g><text x="363.1794871794872" y="623" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">SALIDA</text></g>
+<g><text x="428.03418803418805" y="623" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">JKL321</text></g>
+<g><text x="502.1538461538462" y="623" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">96%</text></g>
+<rect x="555.74" y="612.5" width="50.8" height="16" fill="#fee2e2" stroke="#1f2933" stroke-width="0" rx="8"/><g><text x="581.1435897435898" y="623" font-size="7.4" fill="#991b1b" font-weight="700" text-anchor="middle" xml:space="preserve">DENEGADO</text></g>
+<g><text x="645.7606837606838" y="623" font-size="7.8" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">Fotografía</text></g>
+<rect x="727.15" y="612.5" width="46.2" height="16" fill="#e0f2fe" stroke="#1f2933" stroke-width="0" rx="8"/><g><text x="750.2452991452992" y="623" font-size="7.4" fill="#075985" font-weight="700" text-anchor="middle" xml:space="preserve">Revisar</text></g>
+<line x1="244" y1="475" x2="244" y2="634" stroke="#dce5ec" stroke-width="1" stroke-linecap="round"/>
+<line x1="786" y1="475" x2="786" y2="634" stroke="#dce5ec" stroke-width="1" stroke-linecap="round"/>
+<rect x="870" y="100" width="210" height="430" fill="#0b1828" stroke="#1f2933" stroke-width="0" rx="22"/>
+<rect x="877" y="107" width="196" height="416" fill="#f3f6fa" stroke="#1f2933" stroke-width="0" rx="17"/>
+<rect x="949" y="112" width="52" height="7" fill="#0b1828" stroke="#1f2933" stroke-width="0" rx="4"/>
+<g><text x="886" y="144" font-size="11" fill="#101f35" font-weight="700" text-anchor="start" xml:space="preserve">Mis ingresos y salidas</text></g>
+<g><text x="886" y="153" font-size="7.5" fill="#607288" font-weight="400" text-anchor="start" xml:space="preserve">Últimos 100 movimientos</text></g>
+<g><text x="886" y="177" font-size="7.2" fill="#1f2933" font-weight="700" text-anchor="start" xml:space="preserve">Fecha</text></g>
+<g><text x="960" y="177" font-size="7.2" fill="#1f2933" font-weight="700" text-anchor="start" xml:space="preserve">Placa</text></g>
+<g><text x="1030" y="177" font-size="7.2" fill="#1f2933" font-weight="700" text-anchor="start" xml:space="preserve">Mov.</text></g>
+<g><text x="886" y="200" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">12/10 08:12</text></g>
+<g><text x="960" y="200" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">ABC123</text></g>
+<g><text x="1030" y="200" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">ING</text></g>
+<g><text x="886" y="224" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">12/10 09:20</text></g>
+<g><text x="960" y="224" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">QWE456</text></g>
+<g><text x="1030" y="224" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">ING</text></g>
+<g><text x="886" y="248" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">11/10 18:40</text></g>
+<g><text x="960" y="248" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">ABC123</text></g>
+<g><text x="1030" y="248" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">SAL</text></g>
+<g><text x="886" y="272" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">11/10 08:05</text></g>
+<g><text x="960" y="272" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">ABC123</text></g>
+<g><text x="1030" y="272" font-size="7" fill="#1c3048" font-weight="400" text-anchor="start" xml:space="preserve">ING</text></g>
+<g><text x="886" y="318" font-size="7.2" fill="#607288" font-weight="400" text-anchor="start" font-style="italic" xml:space="preserve">Solo consulta; no autoriza.</text></g>
+<rect x="886" y="332" width="64.6" height="16" fill="#e0f2fe" stroke="#1f2933" stroke-width="0" rx="8"/><g><text x="918.3" y="343" font-size="7.4" fill="#075985" font-weight="700" text-anchor="middle" xml:space="preserve">PROPIETARIO</text></g>
+<rect x="870" y="555" width="210" height="255" fill="#ffffff" stroke="#dce5ec" stroke-width="1.2" rx="10"/>
+<g><text x="884" y="579" font-size="10.5" fill="#18344f" font-weight="700" text-anchor="start" xml:space="preserve">Reglas</text></g>
+<g><text x="886" y="550" font-size="8" fill="#1f2933" font-weight="400" text-anchor="start" xml:space="preserve">• Confianza mínima: 85</text>
+<text x="886" y="568" font-size="8" fill="#1f2933" font-weight="400" text-anchor="start" xml:space="preserve">• Revisión: INCIERTO o DENEGADO</text>
+<text x="886" y="586" font-size="8" fill="#1f2933" font-weight="400" text-anchor="start" xml:space="preserve">• Motivo: mínimo 10 caracteres</text>
+<text x="886" y="604" font-size="8" fill="#1f2933" font-weight="400" text-anchor="start" xml:space="preserve">• Revisión única por evento</text>
+<text x="886" y="622" font-size="8" fill="#1f2933" font-weight="400" text-anchor="start" xml:space="preserve">• Propietario: solo sus movimientos</text>
+<text x="886" y="640" font-size="8" fill="#1f2933" font-weight="400" text-anchor="start" xml:space="preserve">• Historial: historial.ver</text></g>
+<g><text x="600" y="836" font-size="9" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">La evidencia visual es</text>
+<text x="600" y="847" font-size="9" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">obligatoria y la lectura</text>
+<text x="600" y="859" font-size="9" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">incierta nunca autoriza el</text>
+<text x="600" y="870" font-size="9" fill="#5b6b7a" font-weight="400" text-anchor="middle" font-style="italic" xml:space="preserve">acceso.</text></g>
+</svg>
